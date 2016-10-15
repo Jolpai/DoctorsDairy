@@ -28,7 +28,8 @@ public class MonthSelection extends AppCompatActivity {
     private MonthSelection.MyPagerAdapter adapter;
 
     private int toolbarColor,toolbarTextColor,white,amber_500,green_500,blue_500;
-    public  static  Toolbar toolbar;
+    public  static
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

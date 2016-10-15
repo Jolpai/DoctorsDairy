@@ -19,6 +19,7 @@ import com.andexert.library.RippleView;
 import com.jolpai.doctorsdairy.App;
 import com.jolpai.doctorsdairy.R;
 import com.jolpai.doctorsdairy.activity.DailyReport;
+import com.jolpai.doctorsdairy.activity.MonthlyPlan;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -170,7 +171,7 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
     }
 
     private void openActivity(){
-        Intent inent = new Intent(getContext(),DailyReport.class);
+        Intent inent = new Intent(getContext(),MonthlyPlan.class);
         getContext().startActivity(inent);
     }
 

@@ -1,13 +1,129 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_monthly_plan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.jolpai.doctorsdairy.activity.MonthlyPlan">
+    android:background="@color/white"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue_700"
+        android:elevation="4dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:background="@color/blue_700"
+                android:orientation="horizontal">
+                <com.andexert.library.RippleView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    style="@style/planFormRippleEffect_blue_500_400">
+                    <com.rey.material.widget.Spinner
+                        android:id="@+id/spinner_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        app:spn_label="Intent"/>
+
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:minHeight="45dp"
+                    android:layout_weight="1"
+                    style="@style/planFormRippleEffect_blue_500_400">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Date of Intent"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:minHeight="45dp"
+                    android:layout_weight="1"
+                    style="@style/planFormRippleEffect_blue_500_400">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Contact Dates"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:id="@+id/textView" />
+
+                </com.andexert.library.RippleView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:background="@color/blue_700"
+                android:orientation="horizontal">
+
+                <com.andexert.library.RippleView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:minHeight="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="1dp"
+                    style="@style/planFormRippleEffect_blue_500_400">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Name"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:id="@+id/editText" />
+
+                </com.andexert.library.RippleView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>
