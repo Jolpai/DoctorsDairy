@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llReportHeader"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llDate"
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Date"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Professional Workd (hour)"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Academic study (hour)"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Quran Study"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Hadith Study (number)"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Literature Study (page)"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Salat with Jama'at"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Participant Intent contact"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Volunteer Intent contact"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Member Intent contact"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Contact"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Book Distribution (number)"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Family meeting "/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Society Work (hh:mm)"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Visit"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Report Keeping"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeHeaderLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeHeaderTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Self-assessment"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/horizontalRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llFooterDate"
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="1"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="2"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="3"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="4"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="5"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="6"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="7"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="8"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="9"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="10"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="11"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="12"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="13"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="14"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="15"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="16"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/landScapeAverageLinearLayoutStyle">
+
+                    <TextView
+                        style="@style/landScapeAverageTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="17"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

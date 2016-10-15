@@ -1,0 +1,225 @@
+<resources >
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+
+
+    <style name="WindowTitleBackground">
+        <item name="android:background">@color/amber_500</item>
+    </style>
+
+    <style name="HomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="greenActionBar">
+        <item name="android:background">@color/green_500</item>
+    </style>
+
+
+
+    <style name="reportRowRippleEffect_green_500_400">
+        <item name="android:background">@drawable/ripple_selector_row_green_100_300</item>
+        <item name="rv_zoom">false</item>
+        <item name="rv_type">rectangle</item>
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:minWidth">45dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:gravity">center|right</item>
+
+    </style>
+
+    <style name="monthRippleEffect_green_500_400">
+        <item name="android:layout_marginRight">.5dp</item>
+        <item name="android:layout_marginBottom">.5dp</item>
+        <item name="android:background">@drawable/ripple_selector_month_green_500_400</item>
+        <item name="rv_zoom">false</item>
+        <item name="rv_type">rectangle</item>
+
+    </style>
+
+    <style name="monthRippleEffect_blue_500_400">
+        <item name="android:layout_marginRight">.5dp</item>
+        <item name="android:layout_marginBottom">.5dp</item>
+        <item name="android:background">@drawable/ripple_selector_month_blue_500_400</item>
+        <item name="rv_zoom">false</item>
+        <item name="rv_type">rectangle</item>
+
+    </style>
+
+    <style name="monthForReportLinearLayoutStyle_1">
+        <item name="android:background">@color/blue_500</item>
+        <item name="android:layout_marginRight">.5dp</item>
+        <item name="android:layout_marginBottom">.5dp</item>
+    </style>
+
+    <style name="monthForReportLinearLayoutStyle_2">
+        <item name="android:background">@color/green_500</item>
+        <item name="android:layout_marginRight">.5dp</item>
+        <item name="android:layout_marginBottom">.5dp</item>
+    </style>
+
+    <style name="monthForReportLinearLayoutStyle_3">
+        <item name="android:background">@color/amber_500</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+    </style>
+
+
+    <style name="landScapeHeaderLinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:background">@color/blue_500</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:gravity">center|left</item>
+
+    </style>
+
+    <style name="landScapeAverageLinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:background">@color/blue_500</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:gravity">center|right</item>
+
+    </style>
+
+    <style name="portraitHeaderLinearLayoutStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:minWidth">45dp</item>
+        <item name="android:background">@color/green_500</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+
+    <style name="portraitAverageLinearLayoutStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:minWidth">45dp</item>
+        <item name="android:background">@color/green_500</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+
+    <style name="landScapeRowLinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:gravity">center|right</item>
+
+    </style>
+
+    <style name="portraitRowLinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:minWidth">45dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:gravity">center|right</item>
+
+    </style>
+
+    <style name="portraitHeaderTextStyle"
+        parent="android:Widget.TextView">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center|bottom</item>
+
+    </style>
+
+    <style name="portraitAverageTextStyle"
+        parent="android:Widget.TextView">
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="landScapeHeaderTextStyle"
+        parent="android:Widget.TextView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+    <style name="landScapeAverageTextStyle"
+        parent="android:Widget.TextView">
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center|right</item>
+    </style>
+
+    <style name="landScapeRowTextStyle"
+        parent="android:Widget.TextView">
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black_500</item>
+        <item name="android:gravity">center|right</item>
+    </style>
+
+    <style name="portraitRowTextStyle"
+        parent="android:Widget.TextView">
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black_500</item>
+        <item name="android:gravity">center|right</item>
+    </style>
+
+
+    <style name="landScapeRowCheckBoxStyle"
+        parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/blue_500</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+
+    <style name="reportAddEditEditTextStyle"
+        parent="android:Widget.EditText">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:minWidth="50dp"
+    android:background="@color/blue_400">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llFooterDate"
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                android:id="@+id/txtDate"
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="2"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="3"/>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="4"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="7"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="8"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="9"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="11"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="12"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="13"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="14"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="15"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="16"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/landScapeRowLinearLayoutStyle">
+
+            <TextView
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="17"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

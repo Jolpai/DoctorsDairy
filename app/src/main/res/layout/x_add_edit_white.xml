@@ -1,0 +1,439 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_500">
+
+    <!-- TODO: Update blank fragment layout -->
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:scrollbars="none">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="horizontal">
+
+           <LinearLayout
+               android:id="@+id/llReportHeader"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="7"
+               android:orientation="vertical">
+
+               <LinearLayout
+                   android:id="@+id/llDate"
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:text="Date"/>
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:text="Professional Workd (hour)"/>
+
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:text="Academic study (hour)"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Quran Study"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Hadith Study (number)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Literature Study (page)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Salat with Jama'at"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Participant Intent contact"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Volunteer Intent contact"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Member Intent contact"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Contact"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:text="Book Distribution (number)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Family meeting "/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Society Work (hh:mm)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Visit"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Report Keeping"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeHeaderLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeHeaderTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="Self-assessment"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="3"
+               android:orientation="vertical">
+
+               <LinearLayout
+                   android:id="@+id/llFooterDate"
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <TextView
+                       style="@style/landScapeAverageTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:text="1"/>
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="2 (hour)"/>
+
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="5 (hour)"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <CheckBox
+                       style="@style/landScapeRowCheckBoxStyle"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="12 (number)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="10 (page)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:hint="5 (number)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="2 (number)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="3 (number)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="2 (number)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="2 (number)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="2 (number)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <CheckBox
+                       style="@style/landScapeRowCheckBoxStyle"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <EditText
+                       style="@style/reportAddEditEditTextStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:hint="1.20 (hh.mm)"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <CheckBox
+                       style="@style/landScapeRowCheckBoxStyle"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"/>
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <CheckBox
+                       style="@style/landScapeRowCheckBoxStyle"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   style="@style/landScapeAverageLinearLayoutStyle">
+
+                   <CheckBox
+                       style="@style/landScapeRowCheckBoxStyle"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+
+   </ScrollView>
+</LinearLayout>

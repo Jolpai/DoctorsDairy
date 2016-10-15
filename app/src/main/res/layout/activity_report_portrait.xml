@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DailyReport">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Date"
+                            android:minHeight="45dp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Professional Workd (hour)"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Academic study (hour)"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="45dp"
+                            android:gravity="bottom|center_vertical"
+                            android:text="Quran Study"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Hadith Study (number)"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Literature Study (page)"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Salat with Jama'at"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Participant Intent contact"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Volunteer Intent contact"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Member Intent contact"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Contact"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|left"
+                            android:text="Book Distribution"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Family meeting "/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Society Work (hh:mm)"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Visit"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Report Keeping"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <com.jolpai.doctorsdairy.custom.VerticalTextView
+                            style="@style/portraitHeaderTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Self-assessment"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/horizontalRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="1"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="2"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="3"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="4"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="5"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="6"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="7"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="8"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="9"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="10"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="11"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="12"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="13"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="14"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="15"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="16"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/portraitHeaderLinearLayoutStyle">
+
+                        <TextView
+                            style="@style/portraitAverageTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="17"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>
