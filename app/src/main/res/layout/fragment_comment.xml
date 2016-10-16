@@ -1,13 +1,87 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_monthly_plan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jolpai.doctorsdairy.fragment.CommentOnReport">
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="55dp"
+                android:background="@color/blue_700"
+                android:orientation="horizontal">
+                <com.andexert.library.RippleView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:minHeight="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="1dp"
+                    style="@style/planFormRippleEffect_blue_500_400">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:id="@+id/editName" />
+
+                </com.andexert.library.RippleView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:background="@color/blue_700"
+                android:orientation="horizontal">
+
+                <com.andexert.library.RippleView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:minHeight="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="1dp"
+                    style="@style/planFormRippleEffect_blue_500_400">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:id="@+id/editFreeText" />
+
+                </com.andexert.library.RippleView>
+
+
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+
+
+
+</LinearLayout>

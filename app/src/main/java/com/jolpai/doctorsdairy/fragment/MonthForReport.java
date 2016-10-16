@@ -16,7 +16,6 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.jolpai.doctorsdairy.App;
 import com.jolpai.doctorsdairy.R;
-import com.google.android.gms.plus.PlusOneButton;
 import com.jolpai.doctorsdairy.activity.DailyReport;
 import com.skyfishjy.library.RippleBackground;
 
@@ -46,7 +45,6 @@ public class MonthForReport extends Fragment implements View.OnClickListener {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private PlusOneButton mPlusOneButton;
 
     private OnFragmentInteractionListener mListener;
 
