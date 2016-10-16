@@ -1,19 +1,26 @@
 package com.jolpai.doctorsdairy.fragment;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.jolpai.doctorsdairy.App;
 import com.jolpai.doctorsdairy.R;
 import com.google.android.gms.plus.PlusOneButton;
 import com.jolpai.doctorsdairy.activity.DailyReport;
+import com.skyfishjy.library.RippleBackground;
+
+import java.util.ArrayList;
 
 /**
  * A fragment with a Google +1 button.
@@ -87,6 +94,24 @@ public class MonthForReport extends Fragment implements View.OnClickListener {
         }
 
         init(v);
+
+        /*final RippleBackground rippleBackground=(RippleBackground)v.findViewById(R.id.ripleOctober);
+        ripleOctober=v.findViewById(R.id.ripleNovember);
+        final Handler handler=new Handler();
+
+        ripleOctober.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rippleBackground.startRippleAnimation();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        foundDevice();
+                    }
+                },3000);
+            }
+        });*/
+
         return v;
     }
 
@@ -268,5 +293,20 @@ public class MonthForReport extends Fragment implements View.OnClickListener {
                 break;
         }
     }
+
+    private void foundDevice(){
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.setDuration(400);
+        animatorSet.setInterpolator(new AccelerateDecelerateInterpolator());
+        ArrayList<ObjectAnimator> animatorList=new ArrayList<>();
+        ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat(ripleOctober, "ScaleX", 0f, 1.2f, 1f);
+        animatorList.add(scaleXAnimator);
+        ObjectAnimator scaleYAnimator = ObjectAnimator.ofFloat(ripleOctober, "ScaleY", 0f, 1.2f, 1f);
+        animatorList.add(scaleYAnimator);
+        //animatorSet.playTogether(animatorList);
+        ripleOctober.setVisibility(View.VISIBLE);
+        animatorSet.start();
+    }
+
 
 }

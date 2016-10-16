@@ -171,6 +171,29 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
+
+       <!-- <com.skyfishjy.library.RippleBackground
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/green_500"
+            android:id="@+id/ripleOctober"
+            app:rb_color="@color/green_400"
+            app:rb_radius="32dp"
+            app:rb_rippleAmount="6"
+            app:rb_duration="3000"
+            app:rb_scale="6">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="October"
+                android:gravity="center"/>
+        </com.skyfishjy.library.RippleBackground>-->
+
+
         <com.andexert.library.RippleView
             android:id="@+id/ripleOctober"
             android:layout_width="0dp"

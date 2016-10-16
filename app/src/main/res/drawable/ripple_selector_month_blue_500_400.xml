@@ -25,6 +25,6 @@
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/blue_400" android:state_pressed="true"/>
-    <item android:drawable="@color/blue_400" android:state_focused="true"/>
-    <item android:drawable="@color/blue_700"/>
+    <item android:drawable="@color/blue_500" android:state_focused="true"/>
+    <item android:drawable="@color/blue_500"/>
 </selector>
