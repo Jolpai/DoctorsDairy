@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 
+import com.facebook.stetho.Stetho;
+
 import java.text.DateFormat;
 import java.util.Date;
 
@@ -24,13 +26,14 @@ public class App extends Application {
         super.onCreate();
         Log.e(TAG,"App");
         Log.e(TAG, currentTime());
-
+        Stetho.initializeWithDefaults(this);
     }
 
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
+
     }
 
     public static Animation blinkAnim(){

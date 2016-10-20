@@ -2,7 +2,6 @@ package com.jolpai.doctorsdairy.activity;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -12,11 +11,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.jolpai.doctorsdairy.App;
 import com.jolpai.doctorsdairy.R;
-import com.jolpai.doctorsdairy.fragment.CommentOnReport;
 import com.jolpai.doctorsdairy.fragment.MonthForPlan;
 import com.jolpai.doctorsdairy.fragment.MonthForReport;
-import com.jolpai.doctorsdairy.fragment.ReportAddEdit;
+import com.jolpai.doctorsdairy.realm_model.PlanForMonth;
+
+import io.realm.Realm;
 
 public class MonthSelection extends AppCompatActivity {
 
@@ -27,7 +28,7 @@ public class MonthSelection extends AppCompatActivity {
     private ViewPager pager;
     private MonthSelection.MyPagerAdapter adapter;
 
-    private int toolbarColor,toolbarTextColor,white,amber_500,green_500,blue_500;
+    private int toolbarColor,toolbarTextColor,white,amber_500,green_500,blue_500,green_hangout,blue_a_400;
     public  static
     Toolbar toolbar;
 
@@ -43,6 +44,8 @@ public class MonthSelection extends AppCompatActivity {
         amber_500=context.getResources().getColor(R.color.amber_500);
         green_500=context.getResources().getColor(R.color.green_500);
         blue_500=context.getResources().getColor(R.color.blue_500);
+        blue_a_400=context.getResources().getColor(R.color.blue_a_400);
+        green_hangout=context.getResources().getColor(R.color.green_hangout);
 
         toolbarColor=green_500;
         toolbarTextColor=white;
@@ -78,8 +81,8 @@ public class MonthSelection extends AppCompatActivity {
                     toolbar.setBackgroundColor(blue_500);
                     tab.setBackgroundColor(blue_500);
                 }else if(position == 1){
-                    toolbar.setBackgroundColor(green_500);
-                    tab.setBackgroundColor(green_500);
+                    toolbar.setBackgroundColor(green_hangout);
+                    tab.setBackgroundColor(green_hangout);
                 }
             }
 
@@ -90,8 +93,19 @@ public class MonthSelection extends AppCompatActivity {
         });
 
 
+       // savePlan();
 
+    }
 
+    private void savePlan(){
+        Realm realm = Realm.getDefaultInstance();
+        realm.beginTransaction();
+
+        PlanForMonth planForMonth= realm.createObject(PlanForMonth.class);
+        planForMonth.setAppUser("Tanim Reja");
+        planForMonth.setPlanDate(App.currentTime());
+
+        realm.commitTransaction();
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {

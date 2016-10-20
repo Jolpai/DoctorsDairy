@@ -24,10 +24,10 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="Date"
@@ -37,10 +37,10 @@
 
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -51,10 +51,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -62,10 +62,10 @@
 
                     </LinearLayout>
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:minHeight="45dp"
@@ -75,10 +75,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -87,10 +87,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -99,10 +99,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -111,10 +111,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -123,10 +123,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -135,10 +135,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -147,10 +147,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -159,10 +159,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom|left"
@@ -171,10 +171,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -183,10 +183,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -195,10 +195,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -207,10 +207,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -219,10 +219,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdairy.custom.VerticalTextView
-                            style="@style/portraitHeaderTextStyle"
+                            style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
@@ -262,10 +262,10 @@
                     android:background="@color/white">
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="1"/>
@@ -274,10 +274,10 @@
 
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="2"/>
@@ -287,10 +287,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -298,10 +298,10 @@
 
                     </LinearLayout>
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -310,10 +310,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -322,10 +322,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -334,10 +334,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -346,10 +346,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -358,10 +358,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -370,10 +370,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -382,10 +382,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -394,10 +394,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -406,10 +406,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -418,10 +418,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -430,10 +430,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -442,10 +442,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
@@ -454,10 +454,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        style="@style/portraitHeaderLinearLayoutStyle">
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
-                            style="@style/portraitAverageTextStyle"
+                            style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 

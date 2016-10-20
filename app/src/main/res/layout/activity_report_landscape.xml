@@ -20,7 +20,7 @@
 
                 <LinearLayout
                     android:id="@+id/llDate"
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -32,7 +32,7 @@
 
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -45,7 +45,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -55,7 +55,7 @@
 
                 </LinearLayout>
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -67,7 +67,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -79,7 +79,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -91,7 +91,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -103,7 +103,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -115,7 +115,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -127,7 +127,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -139,7 +139,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -151,7 +151,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -162,7 +162,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -174,7 +174,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -186,7 +186,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -198,7 +198,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -210,7 +210,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeHeaderLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                     <TextView
                         style="@style/landScapeHeaderTextStyle"
@@ -244,7 +244,7 @@
 
                 <LinearLayout
                     android:id="@+id/llFooterDate"
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -257,7 +257,7 @@
 
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -271,7 +271,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -282,7 +282,7 @@
 
                 </LinearLayout>
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -294,7 +294,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -306,7 +306,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -318,7 +318,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -330,7 +330,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -342,7 +342,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -354,7 +354,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -366,7 +366,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -378,7 +378,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -390,7 +390,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -402,7 +402,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -414,7 +414,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -426,7 +426,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"
@@ -438,7 +438,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    style="@style/landScapeAverageLinearLayoutStyle">
+                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                     <TextView
                         style="@style/landScapeAverageTextStyle"

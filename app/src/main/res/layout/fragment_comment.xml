@@ -16,24 +16,30 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="55dp"
-                android:background="@color/blue_700"
+                android:minHeight="45dp"
+                android:background="@color/blue_500"
                 android:orientation="horizontal">
                 <com.andexert.library.RippleView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:minHeight="45dp"
                     android:layout_weight="1"
+                    android:paddingTop="5dp"
                     android:layout_marginRight="1dp"
-                    style="@style/planFormRippleEffect_blue_500_400">
+                    style="@style/planFormRippleEffect_blue_500_400_1">
 
-                    <EditText
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Name"
-                        android:textColor="@color/white"
-                        android:gravity="center"
-                        android:id="@+id/editName" />
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Person's Name"
+                            android:textColor="@color/white"
+                            android:gravity="left"
+                            android:id="@+id/editName" />
+                    </android.support.design.widget.TextInputLayout>
+
 
                 </com.andexert.library.RippleView>
 
@@ -42,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="45dp"
-                android:background="@color/blue_700"
+                android:background="@color/blue_500"
                 android:orientation="horizontal">
 
                 <com.andexert.library.RippleView
@@ -51,16 +57,19 @@
                     android:minHeight="45dp"
                     android:layout_weight="1"
                     android:layout_marginRight="1dp"
-                    style="@style/planFormRippleEffect_blue_500_400">
+                    style="@style/planFormRippleEffect_blue_500_400_1">
 
-                    <EditText
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Name"
-                        android:textColor="@color/white"
-                        android:gravity="center"
-                        android:id="@+id/editFreeText" />
-
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Comment"
+                            android:textColor="@color/white"
+                            android:gravity="left"
+                            android:id="@+id/editComment" />
+                    </android.support.design.widget.TextInputLayout>
                 </com.andexert.library.RippleView>
 
 

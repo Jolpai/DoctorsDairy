@@ -18,27 +18,36 @@
 
 
 
-    <style name="MenuItemRippleStyle" parent="Material.Drawable.Ripple.Wave">
-        <item name="rd_rippleColor">#902DA0FF</item>
-        <item name="rd_rippleAnimDuration">300</item>
-        <item name="rd_maskType">rectangle</item>
-        <item name="rd_cornerRadius">0dp</item>
+
+    <style name="RippleReportDateRowColor_blue_500_400">
+        <item name="android:background">@drawable/ripple_selector_row_blue_100_300</item>
+        <item name="rv_zoom">false</item>
+        <item name="rv_type">rectangle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">45dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:gravity">center|right</item>
+
     </style>
 
-    <style name="reportRowRippleEffect_green_500_400">
+
+    <style name="RippleReportDateRowColor_green_500_400">
         <item name="android:background">@drawable/ripple_selector_row_green_100_300</item>
         <item name="rv_zoom">false</item>
         <item name="rv_type">rectangle</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
-        <item name="android:layout_marginLeft">1dp</item>
-        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginTop">.5dp</item>
         <item name="android:gravity">center|right</item>
 
     </style>
 
-    <style name="monthRippleEffect_green_500_400">
+    <style name="RippleMonthSelectionColor_green_500_400">
         <item name="android:layout_marginRight">.5dp</item>
         <item name="android:layout_marginBottom">.5dp</item>
         <item name="android:background">@drawable/ripple_selector_month_green_500_400</item>
@@ -46,7 +55,7 @@
         <item name="rv_type">rectangle</item>
     </style>
 
-    <style name="monthRippleEffect_blue_500_400">
+    <style name="RippleMonthSelectionColor_blue_500_400">
         <item name="android:layout_marginRight">.5dp</item>
         <item name="android:layout_marginBottom">.5dp</item>
         <item name="android:background">@drawable/ripple_selector_month_blue_500_400</item>
@@ -54,122 +63,134 @@
         <item name="rv_type">rectangle</item>
     </style>
 
-    <style name="planFormRippleEffect_blue_500_400">
+    <style name="RipplePlanFormColor_blue_500_400">
+        <item name="android:background">@drawable/ripple_selector_month_blue_700_500</item>
+        <item name="rv_zoom">false</item>
+        <item name="rv_type">rectangle</item>
+    </style>
+
+    <style name="RipplePlanFormColor_green_500_400">
+        <item name="android:background">@drawable/ripple_selector_month_green_500_400</item>
+        <item name="rv_zoom">false</item>
+        <item name="rv_type">rectangle</item>
+    </style>
+
+    <style name="planFormRippleEffect_blue_500_400_1">
         <item name="android:background">@drawable/ripple_selector_month_blue_500_400</item>
         <item name="rv_zoom">false</item>
         <item name="rv_type">rectangle</item>
     </style>
 
-    <style name="monthForReportLinearLayoutStyle_1">
+    <style name="LinearLayoutMonthSelectionColor_blue_500">
         <item name="android:background">@color/blue_500</item>
         <item name="android:layout_marginRight">.5dp</item>
         <item name="android:layout_marginBottom">.5dp</item>
     </style>
 
-    <style name="monthForReportLinearLayoutStyle_2">
+    <style name="LinearLayoutMonthSelectionColor_green_500">
         <item name="android:background">@color/green_500</item>
         <item name="android:layout_marginRight">.5dp</item>
         <item name="android:layout_marginBottom">.5dp</item>
     </style>
 
-    <style name="monthForReportLinearLayoutStyle_3">
+    <style name="LinearLayoutMonthSelectionColor_amber_500">
         <item name="android:background">@color/amber_500</item>
         <item name="android:layout_marginRight">1dp</item>
         <item name="android:layout_marginBottom">1dp</item>
     </style>
 
-    <style name="landScapeHeaderLinearLayoutStyle">
+    <style name="LinearLandscapeReportHeaderColor_blue_500">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">45dp</item>
         <item name="android:background">@color/blue_500</item>
-        <item name="android:layout_marginLeft">1dp</item>
-        <item name="android:layout_marginTop">1dp</item>
-        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginTop">.5dp</item>
+        <item name="android:layout_marginRight">.5dp</item>
         <item name="android:paddingRight">5dp</item>
         <item name="android:gravity">center|left</item>
     </style>
 
-    <style name="landScapeAverageLinearLayoutStyle">
+    <style name="LinearLandscapeReportFooterColor_blue_500">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">45dp</item>
         <item name="android:background">@color/blue_500</item>
-        <item name="android:layout_marginLeft">1dp</item>
-        <item name="android:layout_marginTop">1dp</item>
-        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginTop">.5dp</item>
+        <item name="android:layout_marginRight">.5dp</item>
         <item name="android:gravity">center|right</item>
     </style>
 
-    <style name="portraitHeaderLinearLayoutStyle">
+    <style name="LinearPortraitReportHeaderColor_green_hangout">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
-        <item name="android:background">@color/green_500</item>
-        <item name="android:layout_marginLeft">1dp</item>
-        <item name="android:layout_marginTop">1dp</item>
-        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:background">@color/green_hangout</item>
+        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">.5dp</item>
         <item name="android:layout_gravity">center</item>
     </style>
 
-    <style name="portraitAverageLinearLayoutStyle">
+    <style name="LinearPortraitReportFooterColor_green_hangout">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
-        <item name="android:background">@color/green_500</item>
-        <item name="android:layout_marginLeft">1dp</item>
-        <item name="android:layout_marginTop">1dp</item>
-        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:background">@color/green_hangout</item>
+        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginTop">.5dp</item>
+        <item name="android:layout_marginBottom">.5dp</item>
         <item name="android:layout_gravity">center</item>
     </style>
 
-    <style name="landScapeRowLinearLayoutStyle">
+    <style name="LinearLandscapeReportRow">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">45dp</item>
         <item name="android:background">@color/white</item>
-        <item name="android:layout_marginLeft">1dp</item>
-        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginTop">.5dp</item>
         <item name="android:layout_marginRight">0dp</item>
         <item name="android:gravity">center|right</item>
     </style>
 
-    <style name="portraitRowLinearLayoutStyle">
+    <style name="LinearPortraitReportRow">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
         <item name="android:background">@color/white</item>
-        <item name="android:layout_marginLeft">1dp</item>
-        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginTop">.5dp</item>
         <item name="android:layout_marginBottom">0dp</item>
         <item name="android:gravity">center|right</item>
     </style>
 
-    <style name="portraitHeaderTextStyle" parent="android:Widget.TextView">
+    <style name="TextViewPortraitReportHeader" parent="android:Widget.TextView">
         <item name="android:paddingLeft">5dp</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/gray_200</item>
         <item name="android:gravity">center|bottom</item>
     </style>
 
-    <style name="portraitAverageTextStyle" parent="android:Widget.TextView">
+    <style name="TextViewPortraitReportFooter" parent="android:Widget.TextView">
         <item name="android:padding">5dp</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/gray_200</item>
         <item name="android:gravity">center</item>
     </style>
 
     <style name="landScapeHeaderTextStyle" parent="android:Widget.TextView">
         <item name="android:textSize">15sp</item>
         <item name="android:paddingLeft">5dp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/gray_200</item>
         <item name="android:gravity">center|left</item>
     </style>
 
     <style name="landScapeAverageTextStyle" parent="android:Widget.TextView">
         <item name="android:paddingRight">5dp</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/gray_200</item>
         <item name="android:gravity">center|right</item>
     </style>
 

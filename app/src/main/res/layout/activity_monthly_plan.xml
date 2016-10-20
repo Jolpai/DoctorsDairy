@@ -11,11 +11,19 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/blue_700"
+        android:background="@color/green_hangout"
         android:elevation="4dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minHeight="40dp"
+            android:layout_gravity="right"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="Save"/>
 
     </android.support.v7.widget.Toolbar>
 
@@ -27,23 +35,53 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="45dp"
-                android:background="@color/blue_700"
+                android:minHeight="60dp"
+                android:background="@color/green_hangout"
                 android:orientation="horizontal">
                 <com.andexert.library.RippleView
                     android:layout_width="0dp"
-                    android:layout_height="45dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    style="@style/planFormRippleEffect_blue_500_400">
-                    <com.rey.material.widget.Spinner
-                        android:id="@+id/spinner_label"
+                    style="@style/RipplePlanFormColor_green_500_400">
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        app:spn_label="Intent"/>
+                        android:orientation="vertical"
+
+                        android:gravity="bottom">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Select"
+                                android:textColor="@color/white_trans_50"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <Spinner
+                                android:id="@+id/spinner_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginBottom="8dp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white_trans_50"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="7dp">
+                            </View>
+
+                    </LinearLayout>
+
 
                 </com.andexert.library.RippleView>
 
@@ -52,13 +90,49 @@
                     android:layout_height="match_parent"
                     android:minHeight="45dp"
                     android:layout_weight="1"
-                    style="@style/planFormRippleEffect_blue_500_400">
-                    <TextView
+                    style="@style/RipplePlanFormColor_green_500_400">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Date of Intent"
-                        android:textColor="@color/white"
-                        android:gravity="center"/>
+                        android:orientation="vertical"
+                        android:gravity="bottom">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Dates"
+                            android:textColor="@color/white_trans_50"
+                            android:gravity="center|bottom"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="8dp"/>
+
+
+                        <TextView
+                            android:id="@+id/txtDateIntent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="8dp"/>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/white_trans_50"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginBottom="7dp">
+
+                        </View>
+
+                    </LinearLayout>
+
+
 
                 </com.andexert.library.RippleView>
 
@@ -67,15 +141,47 @@
                     android:layout_height="match_parent"
                     android:minHeight="45dp"
                     android:layout_weight="1"
-                    style="@style/planFormRippleEffect_blue_500_400">
+                    style="@style/RipplePlanFormColor_green_500_400">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Contact Dates"
-                        android:textColor="@color/white"
-                        android:gravity="center"
-                        android:id="@+id/textView" />
+                        android:orientation="vertical"
+                        android:gravity="bottom">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Contact Dates"
+                                android:textColor="@color/white_trans_50"
+                                android:gravity="center|bottom"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="8dp"/>
+
+
+                            <TextView
+                                android:id="@+id/txtDateContact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Date"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_marginBottom="8dp"/>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white_trans_50"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="7dp">
+
+                            </View>
+
+                    </LinearLayout>
 
                 </com.andexert.library.RippleView>
 
@@ -84,24 +190,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="45dp"
-                android:background="@color/blue_700"
+                android:background="@color/green_hangout"
                 android:orientation="horizontal">
 
                 <com.andexert.library.RippleView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:minHeight="45dp"
+                    android:minHeight="60dp"
                     android:layout_weight="1"
                     android:layout_marginRight="1dp"
-                    style="@style/planFormRippleEffect_blue_500_400">
+                    style="@style/RipplePlanFormColor_green_500_400">
 
-                    <EditText
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Name"
-                        android:textColor="@color/white"
-                        android:gravity="center"
-                        android:id="@+id/editText" />
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Parson's Name"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textColorHint="@color/amber_500"
+                            android:id="@+id/editText" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
 
                 </com.andexert.library.RippleView>
 

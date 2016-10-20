@@ -11,7 +11,7 @@
 
         <com.andexert.library.RippleView
             android:id="@+id/llFooterDate"
-            style="@style/reportRowRippleEffect_green_500_400">
+            style="@style/RippleReportDateRowColor_green_500_400">
 
             <TextView
                 android:id="@+id/txtDate"
@@ -25,7 +25,7 @@
 
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -39,7 +39,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -49,7 +49,7 @@
 
         </LinearLayout>
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -61,7 +61,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -73,7 +73,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -85,7 +85,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -97,7 +97,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -109,7 +109,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -121,7 +121,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -133,7 +133,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -145,7 +145,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -157,7 +157,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -169,7 +169,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -181,7 +181,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -193,7 +193,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"
@@ -205,7 +205,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/portraitRowLinearLayoutStyle">
+            style="@style/LinearPortraitReportRow">
 
             <TextView
                 style="@style/landScapeRowTextStyle"

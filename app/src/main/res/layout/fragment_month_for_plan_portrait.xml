@@ -17,7 +17,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_green_500_400">
+            style="@style/RippleMonthSelectionColor_green_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_green_500_400">
+            style="@style/RippleMonthSelectionColor_green_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -47,7 +47,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_green_500_400">
+            style="@style/RippleMonthSelectionColor_green_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -70,7 +70,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_green_500_400">
+            style="@style/RippleMonthSelectionColor_green_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -85,7 +85,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_green_500_400">
+            style="@style/RippleMonthSelectionColor_green_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -100,7 +100,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_green_500_400">
+            style="@style/RippleMonthSelectionColor_green_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -122,7 +122,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_blue_500_400">
+            style="@style/RippleMonthSelectionColor_blue_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -137,7 +137,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_blue_500_400">
+            style="@style/RippleMonthSelectionColor_blue_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -152,7 +152,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_blue_500_400">
+            style="@style/RippleMonthSelectionColor_blue_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -176,7 +176,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_blue_500_400">
+            style="@style/RippleMonthSelectionColor_blue_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -191,7 +191,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_blue_500_400">
+            style="@style/RippleMonthSelectionColor_blue_500_400">
 
             <TextView
                 android:layout_width="match_parent"
@@ -206,7 +206,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/monthRippleEffect_blue_500_400">
+            style="@style/RippleMonthSelectionColor_blue_500_400">
 
             <TextView
                 android:layout_width="match_parent"
