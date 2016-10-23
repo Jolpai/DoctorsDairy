@@ -2,6 +2,7 @@ package com.jolpai.doctorsdairy;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Build;
 import android.support.multidex.MultiDex;
 import android.util.Log;
 import android.view.animation.AlphaAnimation;
@@ -20,6 +21,7 @@ public class App extends Application {
 
 
     public static String TAG="TAG";
+    public static String SDK_VERSION;
 
     @Override
     public void onCreate() {
@@ -27,6 +29,10 @@ public class App extends Application {
         Log.e(TAG,"App");
         Log.e(TAG, currentTime());
         Stetho.initializeWithDefaults(this);
+        if(Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP){
+            SDK_VERSION="v21";
+        }
+
     }
 
     @Override

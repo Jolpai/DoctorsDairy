@@ -48,7 +48,7 @@ public class DailyReport extends AppCompatActivity {
 
         hideStatusBar();
         checkOrientation();
-       initialize();
+        initialize();
 
     }
 
