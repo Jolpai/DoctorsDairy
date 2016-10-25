@@ -4,9 +4,12 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jolpai.doctorsdairy.App;
 import com.jolpai.doctorsdairy.R;
@@ -20,12 +23,15 @@ import java.sql.Date;
 import java.util.Calendar;
 
 import io.realm.Realm;
+import io.realm.RealmQuery;
+import io.realm.RealmResults;
 
 public class MonthlyPlan extends AppCompatActivity implements View.OnClickListener,
         TimePickerDialog.OnTimeSetListener,
         DatePickerDialog.OnDateSetListener{
 
     TextView txtDateIntent,txtDateContact;
+    EditText editTextPersonName;
 
 
     @Override
@@ -35,6 +41,7 @@ public class MonthlyPlan extends AppCompatActivity implements View.OnClickListen
 
         txtDateIntent =(TextView) findViewById(R.id.txtDateIntent);
         txtDateContact=(TextView) findViewById(R.id.txtDateContact);
+        editTextPersonName =(EditText)findViewById(R.id.editTextPersonName);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
@@ -84,6 +91,41 @@ public class MonthlyPlan extends AppCompatActivity implements View.OnClickListen
             }
         });
 
+
+        saveData();
+    }
+
+    public void saveData(){
+        Realm.init(this);
+
+        Realm realm =Realm.getDefaultInstance();
+        realm.executeTransactionAsync(new Realm.Transaction(){
+
+            @Override
+            public void execute(Realm bgRealm) {
+                PlanForMonth planForMonth = bgRealm.createObject(PlanForMonth.class);
+                planForMonth.setAppUser("Tanim Reja");
+                planForMonth.setPlanDate("10/24/2016");
+                planForMonth.setMonth("10");
+            }
+        }, new Realm.Transaction.OnSuccess() {
+            @Override
+            public void onSuccess() {
+                // Transaction was a success.
+                Log.e("","");
+            }
+
+        },new Realm.Transaction.OnError() {
+            @Override
+            public void onError(Throwable error) {
+                // Transaction failed and was automatically canceled.
+            }
+        });
+
+        RealmResults<PlanForMonth> result = realm.where(PlanForMonth.class).findAll();
+        PlanForMonth pfm= result.get(0);
+
+        Log.e("realm",pfm.getAppUser()+"   "+result.size());
 
 
     }

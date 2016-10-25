@@ -29,9 +29,7 @@ public class App extends Application {
         Log.e(TAG,"App");
         Log.e(TAG, currentTime());
         Stetho.initializeWithDefaults(this);
-        if(Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP){
-            SDK_VERSION="v21";
-        }
+
 
     }
 

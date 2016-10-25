@@ -212,7 +212,7 @@
                             android:textColor="@color/white"
                             android:gravity="center"
                             android:textColorHint="@color/amber_500"
-                            android:id="@+id/editText" />
+                            android:id="@+id/editTextPersonName" />
 
                     </android.support.design.widget.TextInputLayout>
 
