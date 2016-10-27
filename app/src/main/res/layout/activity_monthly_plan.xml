@@ -19,8 +19,7 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minHeight="40dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="right"
             style="@style/Widget.AppCompat.Button.Colored"
             android:text="Save"/>
@@ -31,210 +30,112 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="60dp"
+                android:paddingTop="5dp"
                 android:background="@color/green_hangout"
-                android:orientation="horizontal">
-                <com.andexert.library.RippleView
-                    android:layout_width="0dp"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
+                <TextView
+                    android:id="@+id/lblContactType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select"
+                    android:textColor="@color/white_trans_50"
+                    android:gravity="left"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textSize="12sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/lblContactDate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Dates"
+                    android:textColor="@color/white_trans_50"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:layout_toLeftOf="@+id/lblIntentDate"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/lblIntentDate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Intent Date"
+                    android:textColor="@color/white_trans_50"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@+id/lblContactType"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:id="@+id/txtDateIntent"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.5"
-                    style="@style/RipplePlanFormColor_green_500_400">
-                    <LinearLayout
+                    android:layout_below="@id/lblContactDate"
+                    android:text="Date"
+                    android:textColor="@color/white"
+                    android:gravity="left"
+                    android:textSize="16sp"
+                    android:layout_toLeftOf="@+id/txtDateContact"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/txtDateContact"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lblIntentDate"
+                    android:layout_alignParentRight="true"
+                    android:text="Date"
+                    android:textColor="@color/white"
+                    android:gravity="left"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/lblPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_below="@id/spinner_label">
+
+                    <EditText
+                        android:id="@+id/editTextPersonName"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
+                        android:text="Hello"
+                        android:gravity="left"
+                        android:hint="Parson's Name"
+                        android:textColor="@color/white" />
 
-                        android:gravity="bottom">
+                </android.support.design.widget.TextInputLayout>
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Select"
-                                android:textColor="@color/white_trans_50"
-                                android:gravity="center"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="5dp"/>
-
-                            <Spinner
-                                android:id="@+id/spinner_label"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:layout_marginBottom="8dp"/>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="@color/white_trans_50"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginBottom="7dp">
-                            </View>
-
-                    </LinearLayout>
-
-
-                </com.andexert.library.RippleView>
-
-                <com.andexert.library.RippleView
-                    android:layout_width="0dp"
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerTargetList"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:minHeight="45dp"
-                    android:layout_weight="1"
-                    style="@style/RipplePlanFormColor_green_500_400">
+                    android:layout_below="@+id/lblPersonName"
+                    android:background="@color/green_500"/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="bottom">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Contact Dates"
-                            android:textColor="@color/white_trans_50"
-                            android:gravity="center|bottom"
-                            android:textSize="12sp"
-                            android:layout_marginBottom="8dp"/>
-
-
-                        <TextView
-                            android:id="@+id/txtDateIntent"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Date"
-                            android:textColor="@color/white"
-                            android:gravity="center"
-                            android:textSize="16sp"
-                            android:layout_marginBottom="8dp"/>
-
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/white_trans_50"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="3dp"
-                            android:layout_marginRight="3dp"
-                            android:layout_marginBottom="7dp">
-
-                        </View>
-
-                    </LinearLayout>
-
-
-
-                </com.andexert.library.RippleView>
-
-                <com.andexert.library.RippleView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:minHeight="45dp"
-                    android:layout_weight="1"
-                    style="@style/RipplePlanFormColor_green_500_400">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="bottom">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Contact Dates"
-                                android:textColor="@color/white_trans_50"
-                                android:gravity="center|bottom"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="8dp"/>
-
-
-                            <TextView
-                                android:id="@+id/txtDateContact"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Date"
-                                android:textColor="@color/white"
-                                android:gravity="center"
-                                android:textSize="16sp"
-                                android:layout_marginBottom="8dp"/>
-
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="@color/white_trans_50"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginBottom="7dp">
-
-                            </View>
-
-                    </LinearLayout>
-
-                </com.andexert.library.RippleView>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="45dp"
-                android:background="@color/green_hangout"
-                android:orientation="horizontal">
-
-                <com.andexert.library.RippleView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:minHeight="60dp"
-                    android:layout_weight="1"
-                    android:layout_marginRight="1dp"
-                    style="@style/RipplePlanFormColor_green_500_400">
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:hint="Parson's Name"
-                            android:textColor="@color/white"
-                            android:gravity="center"
-                            android:textColorHint="@color/amber_500"
-                            android:id="@+id/editTextPersonName" />
-
-                    </android.support.design.widget.TextInputLayout>
-
-
-
-                </com.andexert.library.RippleView>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="200dp"
-                android:background="@color/white"
-                android:orientation="horizontal">
-            </LinearLayout>
-
-        </LinearLayout>
+            </RelativeLayout>
 
 
     </ScrollView>
+
+
 
 
 </LinearLayout>
