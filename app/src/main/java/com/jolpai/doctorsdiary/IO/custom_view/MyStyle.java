@@ -1,13 +1,7 @@
-package com.jolpai.doctorsdairy.custom;
+package com.jolpai.doctorsdiary.IO.custom_view;
 
-import android.graphics.Color;
-import android.graphics.LightingColorFilter;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.LayerDrawable;
-import android.graphics.drawable.StateListDrawable;
-
-import com.jolpai.doctorsdairy.R;
 
 import java.util.Random;
 

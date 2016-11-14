@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdairy;
+package com.jolpai.doctorsdiary;
 
 import android.app.Application;
 import android.content.Context;
@@ -22,10 +22,13 @@ public class App extends Application {
 
     public static String TAG="TAG";
     public static String SDK_VERSION;
+    public static String ACTION_MSG="ACTION_MSG";
+
 
     @Override
     public void onCreate() {
         super.onCreate();
+       // this.context =thi
         Log.e(TAG,"App");
         Log.e(TAG, currentTime());
         Stetho.initializeWithDefaults(this);

@@ -1,6 +1,5 @@
-package com.jolpai.doctorsdairy.activity;
+package com.jolpai.doctorsdiary.IO.activity;
 
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -9,21 +8,16 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.jolpai.doctorsdairy.App;
-import com.jolpai.doctorsdairy.R;
-import com.jolpai.doctorsdairy.realm_model.PlanForMonth;
-import com.rey.material.widget.Spinner;
+import com.jolpai.doctorsdiary.R;
+import com.jolpai.doctorsdiary.realm_model.PlanForMonth;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
-import java.sql.Date;
 import java.util.Calendar;
 
 import io.realm.Realm;
-import io.realm.RealmQuery;
 import io.realm.RealmResults;
 
 public class MonthlyPlan extends AppCompatActivity implements View.OnClickListener,

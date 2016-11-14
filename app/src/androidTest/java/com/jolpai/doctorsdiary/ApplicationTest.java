@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdairy;
+package com.jolpai.doctorsdiary;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

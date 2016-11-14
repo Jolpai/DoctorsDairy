@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdairy.activity;
+package com.jolpai.doctorsdiary.IO.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,11 +11,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import com.astuetz.PagerSlidingTabStrip;
-import com.jolpai.doctorsdairy.App;
-import com.jolpai.doctorsdairy.R;
-import com.jolpai.doctorsdairy.fragment.MonthForPlan;
-import com.jolpai.doctorsdairy.fragment.MonthForReport;
-import com.jolpai.doctorsdairy.realm_model.PlanForMonth;
+import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.R;
+import com.jolpai.doctorsdiary.IO.fragment.MonthForPlan;
+import com.jolpai.doctorsdiary.IO.fragment.MonthForReport;
+import com.jolpai.doctorsdiary.realm_model.PlanForMonth;
 
 import io.realm.Realm;
 

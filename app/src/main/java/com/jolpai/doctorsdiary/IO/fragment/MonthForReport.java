@@ -1,35 +1,33 @@
-package com.jolpai.doctorsdairy.fragment;
+package com.jolpai.doctorsdiary.IO.fragment;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.widget.LinearLayout;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
-import com.andexert.library.RippleView;
-import com.jolpai.doctorsdairy.App;
-import com.jolpai.doctorsdairy.R;
-import com.jolpai.doctorsdairy.activity.DailyReport;
-import com.jolpai.doctorsdairy.activity.MonthlyPlan;
+import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.R;
+import com.jolpai.doctorsdiary.IO.activity.DailyReport;
+
+import java.util.ArrayList;
 
 /**
- * A simple {@link Fragment} subclass.
+ * A fragment with a Google +1 button.
  * Activities that contain this fragment must implement the
- * {@link MonthForPlan.OnFragmentInteractionListener} interface
+ * {@link MonthForReport.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link MonthForPlan#newInstance} factory method to
+ * Use the {@link MonthForReport#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MonthForPlan extends Fragment implements View.OnClickListener{
+public class MonthForReport extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,13 +36,17 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
     public View ripleJanuary,ripleFebruary,ripleMarch,ripleApril,ripleMay,ripleJune,
             ripleJuly,ripleAugust,ripleSeptember,ripleOctober,ripleNovember,ripleDecember,allMonth;
 
+    // The request code must be 0 or greater.
+    private static final int PLUS_ONE_REQUEST_CODE = 0;
+    // The URL to +1.  Must be a valid URL.
+    private final String PLUS_ONE_URL = "http://developer.android.com";
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
-    public MonthForPlan() {
+    public MonthForReport() {
         // Required empty public constructor
     }
 
@@ -54,11 +56,11 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MonthForPlan.
+     * @return A new instance of fragment MonthForReport.
      */
     // TODO: Rename and change types and number of parameters
-    public static MonthForPlan newInstance(String param1, String param2) {
-        MonthForPlan fragment = new MonthForPlan();
+    public static MonthForReport newInstance(String param1, String param2) {
+        MonthForReport fragment = new MonthForReport();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -76,23 +78,45 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View v =null;
-
-        int orientation= MonthForPlan.this.getResources().getConfiguration().orientation;
+        View v=null;
+        int orientation= MonthForReport.this.getResources().getConfiguration().orientation;
         if(orientation == Configuration.ORIENTATION_PORTRAIT) {
-            v= inflater.inflate(R.layout.fragment_month_for_plan_portrait, container, false);
+            v =inflater.inflate(R.layout.fragment_month_for_report_portrait, container, false);
 
         }else if(orientation == Configuration.ORIENTATION_LANDSCAPE){
-            v= inflater.inflate(R.layout.fragment_month_for_plan_landscape, container, false);
+            v= inflater.inflate(R.layout.fragment_month_for_report_landscape, container, false);
         }
 
         init(v);
 
+        /*final RippleBackground rippleBackground=(RippleBackground)v.findViewById(R.id.ripleOctober);
+        ripleOctober=v.findViewById(R.id.ripleNovember);
+        final Handler handler=new Handler();
+
+        ripleOctober.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rippleBackground.startRippleAnimation();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        foundDevice();
+                    }
+                },3000);
+            }
+        });*/
+
         return v;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Refresh the state of the +1 button each time the activity receives focus.
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -117,6 +141,21 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
     }
 
     /**
@@ -171,23 +210,8 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
     }
 
     private void openActivity(){
-        Intent inent = new Intent(getContext(),MonthlyPlan.class);
+        Intent inent = new Intent(getContext(),DailyReport.class);
         getContext().startActivity(inent);
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
     }
 
     private void init(View view){
@@ -223,8 +247,8 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
 
     private void setAnimation() {
 
-        int month=10;
-        switch (month){
+        int month = 10;
+        switch (month) {
             case 1:
                 ripleJanuary.startAnimation(App.blinkAnim());
                 break;
@@ -264,6 +288,21 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
             case 0:
                 break;
         }
-
     }
+
+    private void foundDevice(){
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.setDuration(400);
+        animatorSet.setInterpolator(new AccelerateDecelerateInterpolator());
+        ArrayList<ObjectAnimator> animatorList=new ArrayList<>();
+        ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat(ripleOctober, "ScaleX", 0f, 1.2f, 1f);
+        animatorList.add(scaleXAnimator);
+        ObjectAnimator scaleYAnimator = ObjectAnimator.ofFloat(ripleOctober, "ScaleY", 0f, 1.2f, 1f);
+        animatorList.add(scaleYAnimator);
+        //animatorSet.playTogether(animatorList);
+        ripleOctober.setVisibility(View.VISIBLE);
+        animatorSet.start();
+    }
+
+
 }

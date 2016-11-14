@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdairy.realm_model;
+package com.jolpai.doctorsdiary.realm_model;
 
 import io.realm.RealmObject;
 

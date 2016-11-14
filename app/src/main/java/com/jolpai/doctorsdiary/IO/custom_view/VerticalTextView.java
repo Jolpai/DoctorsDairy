@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdairy.custom;
+package com.jolpai.doctorsdiary.IO.custom_view;
 
 import android.content.Context;
 import android.graphics.Canvas;

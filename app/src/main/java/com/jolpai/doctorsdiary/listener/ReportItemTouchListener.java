@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdairy.listener;
+package com.jolpai.doctorsdiary.listener;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;

@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdairy.activity;
+package com.jolpai.doctorsdiary.IO.activity;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -6,11 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.jolpai.doctorsdairy.App;
-import com.jolpai.doctorsdairy.R;
+import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.R;
 
-import static com.jolpai.doctorsdairy.App.TAG;
-import static com.jolpai.doctorsdairy.App.currentTime;
+import static com.jolpai.doctorsdiary.App.TAG;
+import static com.jolpai.doctorsdiary.App.currentTime;
 
 public class Splash extends AppCompatActivity {
 

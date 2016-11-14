@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdairy.activity;
+package com.jolpai.doctorsdiary.IO.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,19 +18,18 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.andexert.library.RippleView;
-import com.jolpai.doctorsdairy.App;
-import com.jolpai.doctorsdairy.R;
-import com.jolpai.doctorsdairy.custom.MyStyle;
+import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.R;
+import com.jolpai.doctorsdiary.IO.custom_view.MyStyle;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.jolpai.doctorsdairy.App.TAG;
-import static com.jolpai.doctorsdairy.App.currentTime;
+import static com.jolpai.doctorsdiary.App.TAG;
+import static com.jolpai.doctorsdiary.App.currentTime;
 
 public class DailyReport extends AppCompatActivity {
     LinearLayout llReportHeader,llDate;
