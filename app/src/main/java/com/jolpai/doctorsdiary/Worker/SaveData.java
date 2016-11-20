@@ -13,9 +13,9 @@ import io.realm.RealmObject;
  */
 
 public class SaveData {
+   // static Realm realm=null;
+    public static void saveDataToRealm(Context context, final RealmObject obj, final Class<RealmObject> clazz){
 
-    public static void saveDataToRealm(Context context, final RealmObject realmObject){
-        Boolean returnType;
         Realm.init(context);
 
         Realm realm =Realm.getDefaultInstance();
@@ -23,8 +23,7 @@ public class SaveData {
             @Override
             public void execute(Realm realm) {
                 //RealmObject planForMonth = realm.createObject(clazz);
-
-
+                realm.copyToRealm(obj);
             }
         },new Realm.Transaction.OnSuccess(){
             @Override

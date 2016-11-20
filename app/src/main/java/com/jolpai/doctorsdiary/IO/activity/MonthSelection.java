@@ -15,7 +15,7 @@ import com.jolpai.doctorsdiary.App;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.IO.fragment.MonthForPlan;
 import com.jolpai.doctorsdiary.IO.fragment.MonthForReport;
-import com.jolpai.doctorsdiary.realm_model.PlanForMonth;
+import com.jolpai.doctorsdiary.Realm_Model.PlanForMonth;
 
 import io.realm.Realm;
 

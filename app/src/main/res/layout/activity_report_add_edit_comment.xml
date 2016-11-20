@@ -9,7 +9,7 @@
 
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/blue_500"
@@ -18,24 +18,10 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-       <!-- <com.andexert.library.RippleView
-            android:id="@+id/ripleJanuary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="45dp"
-            android:layout_gravity="right"
-            style="@style/monthRippleEffect_blue_500_400">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:minHeight="40dp"
-                android:layout_gravity="right"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:text="ADD"/>
-        </com.andexert.library.RippleView>-->
 
         <Button
+            android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:minHeight="40dp"

@@ -83,14 +83,14 @@
 
     <style name="LinearLayoutMonthSelectionColor_blue_500">
         <item name="android:background">@color/blue_500</item>
-        <item name="android:layout_marginRight">.5dp</item>
-        <item name="android:layout_marginBottom">.5dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
     </style>
 
     <style name="LinearLayoutMonthSelectionColor_green_500">
         <item name="android:background">@color/green_500</item>
-        <item name="android:layout_marginRight">.5dp</item>
-        <item name="android:layout_marginBottom">.5dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
     </style>
 
     <style name="LinearLayoutMonthSelectionColor_amber_500">
@@ -104,9 +104,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">45dp</item>
         <item name="android:background">@color/blue_500</item>
-        <item name="android:layout_marginLeft">.5dp</item>
-        <item name="android:layout_marginTop">.5dp</item>
-        <item name="android:layout_marginRight">.5dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
         <item name="android:paddingRight">5dp</item>
         <item name="android:gravity">center|left</item>
     </style>
@@ -116,9 +116,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">45dp</item>
         <item name="android:background">@color/blue_500</item>
-        <item name="android:layout_marginLeft">.5dp</item>
-        <item name="android:layout_marginTop">.5dp</item>
-        <item name="android:layout_marginRight">.5dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
         <item name="android:gravity">center|right</item>
     </style>
 
@@ -127,9 +127,9 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
         <item name="android:background">@color/green_hangout</item>
-        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
         <item name="android:layout_marginTop">0dp</item>
-        <item name="android:layout_marginBottom">.5dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
         <item name="android:layout_gravity">center</item>
     </style>
 
@@ -138,9 +138,9 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
         <item name="android:background">@color/green_hangout</item>
-        <item name="android:layout_marginLeft">.5dp</item>
-        <item name="android:layout_marginTop">.5dp</item>
-        <item name="android:layout_marginBottom">.5dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
         <item name="android:layout_gravity">center</item>
     </style>
 
@@ -149,8 +149,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">45dp</item>
         <item name="android:background">@color/white</item>
-        <item name="android:layout_marginLeft">.5dp</item>
-        <item name="android:layout_marginTop">.5dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
         <item name="android:layout_marginRight">0dp</item>
         <item name="android:gravity">center|right</item>
     </style>
@@ -160,8 +160,8 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
         <item name="android:background">@color/white</item>
-        <item name="android:layout_marginLeft">.5dp</item>
-        <item name="android:layout_marginTop">.5dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
         <item name="android:layout_marginBottom">0dp</item>
         <item name="android:gravity">center|right</item>
     </style>

@@ -27,6 +27,7 @@
                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                    <TextView
+                       android:id="@+id/txtDate"
                        style="@style/landScapeHeaderTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -252,6 +253,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editProfessionalWork"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -266,6 +268,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editAcademicStudy"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -277,6 +280,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <CheckBox
+                       android:id="@+id/checkQuranStudy"
                        style="@style/landScapeRowCheckBoxStyle"
                        android:layout_width="wrap_content"
                        android:layout_height="match_parent"/>
@@ -287,6 +291,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editHadithStudy"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -299,6 +304,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editLiteratureStudy"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -311,6 +317,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editSalatWithJamaat"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -322,6 +329,8 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+
+                       android:id="@+id/editParticipantIntentContact"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -334,6 +343,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editVolunteerIntentContact"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -346,6 +356,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editMemberIntentContact"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -358,6 +369,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editContact"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -370,6 +382,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editBookDistribution"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -382,6 +395,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <CheckBox
+                       android:id="@+id/checkFamilyMeeting"
                        style="@style/landScapeRowCheckBoxStyle"
                        android:layout_width="wrap_content"
                        android:layout_height="match_parent"/>
@@ -392,6 +406,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <EditText
+                       android:id="@+id/editSocietyWork"
                        style="@style/reportAddEditEditTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -404,6 +419,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <CheckBox
+                       android:id="@+id/checkVisit"
                        style="@style/landScapeRowCheckBoxStyle"
                        android:layout_width="wrap_content"
                        android:layout_height="match_parent"/>
@@ -415,6 +431,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <CheckBox
+                       android:id="@+id/checkReportKeeping"
                        style="@style/landScapeRowCheckBoxStyle"
                        android:layout_width="wrap_content"
                        android:layout_height="match_parent"/>
@@ -425,6 +442,7 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <CheckBox
+                       android:id="@+id/checkSelfAssessment"
                        style="@style/landScapeRowCheckBoxStyle"
                        android:layout_width="wrap_content"
                        android:layout_height="match_parent"/>

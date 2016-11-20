@@ -1,4 +1,6 @@
-package com.jolpai.doctorsdiary.realm_model;
+package com.jolpai.doctorsdiary.Realm_Model;
+
+import java.io.Serializable;
 
 import io.realm.RealmObject;
 
@@ -6,8 +8,11 @@ import io.realm.RealmObject;
  * Created by User on 11/13/2016.
  */
 
-public class DailyReport extends RealmObject {
-    private int date;
+public class DailyReport extends RealmObject implements Serializable{
+    private String date;
+    private int toDay;
+    private int month;
+    private int year;
     private  int professionalWork;
     private int academicStudy;
     private boolean quranStudy;
@@ -20,19 +25,43 @@ public class DailyReport extends RealmObject {
     private int contact;
     private int bookDistribution;
     private boolean familyMeeting;
-    private float societyWork;
+    private double societyWork;
     private boolean visit;
     private boolean reportKeeping;
     private boolean selfAssessment;
 
 
 
-    public int getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(int date) {
+    public void setDate(String date) {
         this.date = date;
+    }
+
+    public int getToDay() {
+        return toDay;
+    }
+
+    public void setToDay(int doDay) {
+        this.toDay = doDay;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 
     public int getProfessionalWork() {
@@ -131,11 +160,11 @@ public class DailyReport extends RealmObject {
         this.familyMeeting = familyMeeting;
     }
 
-    public float getSocietyWork() {
+    public double getSocietyWork() {
         return societyWork;
     }
 
-    public void setSocietyWork(float societyWork) {
+    public void setSocietyWork(double societyWork) {
         this.societyWork = societyWork;
     }
 

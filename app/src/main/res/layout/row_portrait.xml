@@ -28,11 +28,10 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtProfessionalWork"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:text="2"/>
+                android:layout_height="match_parent"/>
 
 
 
@@ -42,33 +41,21 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtAcademicStudy"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="3"/>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
         <LinearLayout
             style="@style/LinearPortraitReportRow">
 
-            <TextView
+            <CheckBox
+                android:id="@+id/checkQuranStudy"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                android:text="4"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/LinearPortraitReportRow">
-
-            <TextView
-                style="@style/landScapeRowTextStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:text="5"/>
+                android:clickable="false"/>
 
         </LinearLayout>
 
@@ -76,11 +63,10 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtHadithStudy"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:text="6"/>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -88,11 +74,23 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtLiteratureStudy"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="match_parent"/>
 
-                android:text="7"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            style="@style/LinearPortraitReportRow">
+
+            <TextView
+                android:id="@+id/txtSalatWithJamaat"
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -100,11 +98,10 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtParticipantIntentContact"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:text="8"/>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -112,11 +109,10 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtVolunteerIntentContact"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:text="9"/>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -124,11 +120,10 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtMemberIntentContact"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:text="10"/>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -136,11 +131,10 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtContact"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:text="11"/>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -148,11 +142,10 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtBookDistribution"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:text="12"/>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -160,66 +153,61 @@
             style="@style/LinearPortraitReportRow">
 
             <TextView
+                android:id="@+id/txtSocietyWork"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:text="13"/>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
         <LinearLayout
             style="@style/LinearPortraitReportRow">
 
-            <TextView
+            <CheckBox
+                android:id="@+id/checkFamilyMeeting"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                android:text="14"/>
+                android:clickable="false"/>
 
         </LinearLayout>
 
         <LinearLayout
             style="@style/LinearPortraitReportRow">
 
-            <TextView
+            <CheckBox
+                android:id="@+id/checkVisit"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                android:text="15"/>
+                android:clickable="false"/>
 
         </LinearLayout>
 
         <LinearLayout
             style="@style/LinearPortraitReportRow">
 
-            <TextView
+            <CheckBox
+                android:id="@+id/checkReportKeeping"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                android:text="16"/>
+                android:clickable="false"/>
 
         </LinearLayout>
 
         <LinearLayout
             style="@style/LinearPortraitReportRow">
 
-            <TextView
+            <CheckBox
+                android:id="@+id/checkSelfAssessment"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                android:text="17"/>
+                android:clickable="false"/>
 
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
 
 </LinearLayout>
