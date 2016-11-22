@@ -8,7 +8,7 @@ import android.util.Log;
 
 public class IntParser {
 
-    public static int StrToInt(String string){
+    public static int parseStrToInt(String string){
         int number=0;
         try{
             number=Integer.parseInt(string);

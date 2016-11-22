@@ -17,16 +17,13 @@ import android.widget.Toast;
 
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.Worker.DoubleParser;
-import com.jolpai.doctorsdiary.Worker.GetData;
 import com.jolpai.doctorsdiary.Worker.IntParser;
-import com.jolpai.doctorsdiary.Worker.SaveData;
 import com.jolpai.doctorsdiary.Realm_Model.DailyReport;
+import com.jolpai.doctorsdiary.Worker.SaveData;
 
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-
-import io.realm.RealmResults;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,12 +36,14 @@ import io.realm.RealmResults;
 public class ReportAddEdit extends Fragment  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String YEAR = "";
+    private static final String MONTH = "";
+    private static final String DAY="";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private int year;
+    private int month;
+    private int day;
 
     private TextView txtDate;
     private EditText
@@ -78,17 +77,20 @@ public class ReportAddEdit extends Fragment  {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param year year.
+     * @param month selected month of this year.
+     * @param day selected day of this month.
      * @return A new instance of fragment ReportAddEdit.
      */
     // TODO: Rename and change types and number of parameters
-    public static ReportAddEdit newInstance(int param1, String param2) {
+    public static ReportAddEdit newInstance(int year, int month,int day) {
         ReportAddEdit fragment = new ReportAddEdit();
-        Bundle args = new Bundle();
-        args.putInt(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
+        Bundle bundle = new Bundle();
+        bundle.putInt(YEAR, year);
+        bundle.putInt(MONTH, month);
+        bundle.putInt(DAY,day);
+
+        fragment.setArguments(bundle);
         return fragment;
     }
 
@@ -96,8 +98,9 @@ public class ReportAddEdit extends Fragment  {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            year = getArguments().getInt(YEAR);
+            month = getArguments().getInt(MONTH);
+            day = getArguments().getInt(DAY);
         }
         setHasOptionsMenu(true);
 
@@ -137,26 +140,34 @@ public class ReportAddEdit extends Fragment  {
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"clicked",Toast.LENGTH_SHORT).show();
                 //getActivity().finish();
-                Calendar now =Calendar.getInstance();
-                Date date = now .getTime();
+                Calendar c = Calendar.getInstance();
+                System.out.println("Current time => " + c.getTime());
+
+                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+                String fDate = df.format(c.getTime());
+
+
+               // int yy = c.get(Calendar.YEAR);
+               // int mm = c.get(Calendar.MONTH)+1;
+               // int dd = c.get(Calendar.DAY_OF_MONTH);
 
 
                 DailyReport report = new DailyReport();
-                report.setDate(date.toString());
-                report.setToDay(date.getDay());
-                report.setMonth(date.getMonth());
-                report.setYear(date.getYear());
-                report.setProfessionalWork(IntParser.StrToInt(editProfessionalWorkd.getText().toString()));
-                report.setAcademicStudy(IntParser.StrToInt(editAcademicStudy.getText().toString()));
+                report.setDate(fDate);
+                report.setToDay(day);
+                report.setMonth(month);
+                report.setYear(year);
+                report.setProfessionalWork(IntParser.parseStrToInt(editProfessionalWorkd.getText().toString()));
+                report.setAcademicStudy(IntParser.parseStrToInt(editAcademicStudy.getText().toString()));
                 report.setQuranStudy(checkQuranStudy.isChecked());
-                report.setHadithStudy(IntParser.StrToInt(editHadithStudy.getText().toString()));
-                report.setLiteratureStudy(IntParser.StrToInt(editLiteratureStudy.getText().toString()));
-                report.setSalatwithJamaat(IntParser.StrToInt(editSalatWithJamaat.getText().toString()));
-                report.setParticipantIntentContact(IntParser.StrToInt(editParticipantIntentContact.getText().toString()));
-                report.setVolunteerIntentContact(IntParser.StrToInt(editVolunteerIntentContact.getText().toString()));
-                report.setMemberIntentContact(IntParser.StrToInt(editMemberIntentContact.getText().toString()));
-                report.setContact(IntParser.StrToInt(editContact.getText().toString()));
-                report.setBookDistribution(IntParser.StrToInt(editBookDistribution.getText().toString()));
+                report.setHadithStudy(IntParser.parseStrToInt(editHadithStudy.getText().toString()));
+                report.setLiteratureStudy(IntParser.parseStrToInt(editLiteratureStudy.getText().toString()));
+                report.setSalatwithJamaat(IntParser.parseStrToInt(editSalatWithJamaat.getText().toString()));
+                report.setParticipantIntentContact(IntParser.parseStrToInt(editParticipantIntentContact.getText().toString()));
+                report.setVolunteerIntentContact(IntParser.parseStrToInt(editVolunteerIntentContact.getText().toString()));
+                report.setMemberIntentContact(IntParser.parseStrToInt(editMemberIntentContact.getText().toString()));
+                report.setContact(IntParser.parseStrToInt(editContact.getText().toString()));
+                report.setBookDistribution(IntParser.parseStrToInt(editBookDistribution.getText().toString()));
                 report.setFamilyMeeting(checkFamilyMeeting.isChecked());
                 report.setSocietyWork(DoubleParser.parseStrToDouble(editSocietyWork.getText().toString()));
                 report.setVisit(checkVisit.isChecked());

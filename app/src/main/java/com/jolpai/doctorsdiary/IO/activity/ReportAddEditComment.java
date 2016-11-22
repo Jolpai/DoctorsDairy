@@ -1,5 +1,6 @@
 package com.jolpai.doctorsdiary.IO.activity;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -12,12 +13,14 @@ import com.astuetz.PagerSlidingTabStrip;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.IO.fragment.ReportAddEdit;
 import com.jolpai.doctorsdiary.IO.fragment.CommentOnReport;
+import com.jolpai.doctorsdiary.Worker.IntParser;
 
 public class ReportAddEditComment extends AppCompatActivity {
     FragmentPagerAdapter pagerAdapter;
     private PagerSlidingTabStrip tab;
     private ViewPager pager;
     private MyPagerAdapter adapter;
+    public static int  year,month,day;
 
     private int toolbarColor,toolbarTextColor,white,amber_500,green_500;
 
@@ -51,29 +54,14 @@ public class ReportAddEditComment extends AppCompatActivity {
         tab.setUnderlineColor(white);
         tab.setUnderlineHeight(1);
         tab.setIndicatorHeight(10);
+
+        Intent intent = this.getIntent();;
+        year= IntParser.parseStrToInt(intent.getStringExtra("year"));
+        month=IntParser.parseStrToInt(intent.getStringExtra("month"));
+        day=IntParser.parseStrToInt(intent.getStringExtra("day"));
+
     }
 
-  /*  @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.report_add_edit_comment_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
 
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
@@ -93,9 +81,9 @@ public class ReportAddEditComment extends AppCompatActivity {
 
             switch (position){
                 case 0:
-                    return ReportAddEdit.newInstance(0,"NEW WORD");
+                    return ReportAddEdit.newInstance(year,month,day);
                 case 1:
-                    return CommentOnReport.newInstance(1,"ALL");
+                    return CommentOnReport.newInstance(0,"");
                 default:
                     return null;
             }

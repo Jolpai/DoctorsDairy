@@ -28,6 +28,7 @@ import com.jolpai.doctorsdiary.IO.custom_view.MyStyle;
 import com.jolpai.doctorsdiary.Worker.GetData;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import io.realm.RealmResults;
@@ -73,19 +74,34 @@ public class DailyReport extends AppCompatActivity {
         final RealmResults<com.jolpai.doctorsdiary.Realm_Model.DailyReport> reportList =
                 GetData.getDataFromRealm(this, (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class);
 
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, c.get(Calendar.YEAR));
+        c.set(Calendar.MONTH, c.get(Calendar.MONTH));
+
+         int year = c.get(Calendar.YEAR);
+         int month = c.get(Calendar.MONTH)+1;
+         int dd = c.get(Calendar.DAY_OF_MONTH);
+        int numDays = c.getActualMaximum(Calendar.DATE);
+
         for (int i=0;i<reportList.size();i++){
 
-            horizontalList.add((com.jolpai.doctorsdiary.Realm_Model.DailyReport) reportList.get(i));
+            horizontalList.add(reportList.get(i));
             if(i==reportList.size()-1){
-                for(;i<31;i++){
-                    horizontalList.add(new com.jolpai.doctorsdiary.Realm_Model.DailyReport());
+                for(;i<numDays;i++){
+                    com.jolpai.doctorsdiary.Realm_Model.DailyReport report=new com.jolpai.doctorsdiary.Realm_Model.DailyReport();
+                    report.setToDay(i+1);
+                    report.setYear(year);
+                    report.setMonth(month);
+                    horizontalList.add(report);
                 }
             }
         }
         if(reportList.size()==0){
-            for(int i=0;i<31;i++){
+            for(int i=0;i<numDays;i++){
                 com.jolpai.doctorsdiary.Realm_Model.DailyReport report=new com.jolpai.doctorsdiary.Realm_Model.DailyReport();
                 report.setToDay(i+1);
+                report.setYear(year);
+                report.setMonth(month);
                 horizontalList.add(report);
             }
         }
@@ -247,6 +263,7 @@ public class DailyReport extends AppCompatActivity {
 
             if(dailyReport.getAcademicStudy() == 0) {
                 holder.txtAcademicStudy.setText("");
+
             }else{
                 holder.txtAcademicStudy.setText(dailyReport.getAcademicStudy() + "");
             }
@@ -361,7 +378,10 @@ public class DailyReport extends AppCompatActivity {
                     //Toast.makeText(context,holder.txtDate.getText().toString(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context,ReportAddEditComment.class);
                     com.jolpai.doctorsdiary.Realm_Model.DailyReport report=(com.jolpai.doctorsdiary.Realm_Model.DailyReport)holder.llFooterDate.getTag();
-                    intent.putExtra("report",report.getToDay());
+
+                    intent.putExtra("year",report.getYear()+"");
+                    intent.putExtra("month",report.getMonth()+"");
+                    intent.putExtra("day",report.getToDay()+"");
                     context.startActivity(intent);
                 }
             });
