@@ -139,7 +139,7 @@ public class ReportAddEdit extends Fragment  {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"clicked",Toast.LENGTH_SHORT).show();
-                //getActivity().finish();
+                //
                 Calendar c = Calendar.getInstance();
                 System.out.println("Current time => " + c.getTime());
 
@@ -176,6 +176,8 @@ public class ReportAddEdit extends Fragment  {
 
 
                 SaveData.saveDataToRealm(getContext(),report,(Class)DailyReport.class);
+
+                getActivity().finish();
 
                // RealmResults<DailyReport> results = GetData.getDataFromRealm(getContext(),(Class)DailyReport.class);
 

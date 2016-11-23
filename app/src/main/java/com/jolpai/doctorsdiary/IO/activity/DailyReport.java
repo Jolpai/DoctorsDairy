@@ -52,7 +52,7 @@ public class DailyReport extends AppCompatActivity {
 
         hideStatusBar();
         checkOrientation();
-        initialize();
+        //initialize();
 
     }
 
@@ -176,6 +176,11 @@ public class DailyReport extends AppCompatActivity {
         v.draw(c);
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        initialize();
+    }
 
 // inner Adapter class for recyclerview
     public class Recycler_View_Adapter  extends RecyclerView.Adapter<Recycler_View_Adapter.View_Holder> {

@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:background="@color/blue_500"
         android:layout_height="40dip"
-        android:layout_below="@+id/my_toolbar"
+        android:layout_below="@+id/toolbar"
         android:layout_alignParentLeft="true" />
 
     <android.support.v4.view.ViewPager
