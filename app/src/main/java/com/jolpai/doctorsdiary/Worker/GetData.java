@@ -7,6 +7,7 @@ import com.jolpai.doctorsdiary.Realm_Model.DailyReport;
 
 import io.realm.Realm;
 import io.realm.RealmObject;
+import io.realm.RealmQuery;
 import io.realm.RealmResults;
 
 /**
@@ -15,15 +16,22 @@ import io.realm.RealmResults;
 
 public class GetData {
 
-    public static RealmResults getDataFromRealm(Context context,final Class<RealmObject> clazz){
+    public static RealmResults getOneMonthReportFromRealm(Context context, final Class<RealmObject> clazz){
         Realm.init(context);
         Realm realm =Realm.getDefaultInstance();
         RealmResults<RealmObject> result = realm.where(clazz).findAll();
+        return result;
+    }
+
+    public static RealmResults getOneDayReportFromRealm(Context context, final Class<RealmObject> clazz){
+        Realm.init(context);
+        Realm realm =Realm.getDefaultInstance();
+        RealmQuery<RealmObject> query = realm.where(clazz);
+        query.equalTo("toDay",3);
+        RealmResults<RealmObject> result = query.findAll();
 
 
-       // DailyReport pfm= (DailyReport) result.get(0);
 
-       // Log.e("realm",pfm.getDate()+"   "+result.size());
         return result;
     }
 }

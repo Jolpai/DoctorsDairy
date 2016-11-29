@@ -26,9 +26,11 @@ import com.jolpai.doctorsdiary.App;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.IO.custom_view.MyStyle;
 import com.jolpai.doctorsdiary.Worker.GetData;
+import com.jolpai.doctorsdiary.Worker.StrParser;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 
 import io.realm.RealmResults;
@@ -72,15 +74,15 @@ public class DailyReport extends AppCompatActivity {
 
         final ArrayList<com.jolpai.doctorsdiary.Realm_Model.DailyReport> horizontalList=new ArrayList<>();
         final RealmResults<com.jolpai.doctorsdiary.Realm_Model.DailyReport> reportList =
-                GetData.getDataFromRealm(this, (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class);
+                GetData.getOneMonthReportFromRealm(this, (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class);
 
         Calendar c = Calendar.getInstance();
         c.set(Calendar.YEAR, c.get(Calendar.YEAR));
         c.set(Calendar.MONTH, c.get(Calendar.MONTH));
 
-         int year = c.get(Calendar.YEAR);
-         int month = c.get(Calendar.MONTH)+1;
-         int dd = c.get(Calendar.DAY_OF_MONTH);
+        int year = c.get(Calendar.YEAR);
+        int month = c.get(Calendar.MONTH)+1;
+        int dd = c.get(Calendar.DAY_OF_MONTH);
         int numDays = c.getActualMaximum(Calendar.DATE);
 
         for (int i=0;i<reportList.size();i++){
@@ -96,18 +98,22 @@ public class DailyReport extends AppCompatActivity {
                 }
             }
         }
+        Collections.sort(horizontalList);
         if(reportList.size()==0){
             for(int i=0;i<numDays;i++){
                 com.jolpai.doctorsdiary.Realm_Model.DailyReport report=new com.jolpai.doctorsdiary.Realm_Model.DailyReport();
                 report.setToDay(i+1);
                 report.setYear(year);
                 report.setMonth(month);
+                //SaveData.saveDataToRealm(this,report,(Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class);
                 horizontalList.add(report);
             }
         }
 
-        horizontalRecycler.setLayoutManager(horizontalLayoutManager);
-        horizontalRecycler.setAdapter( new Recycler_View_Adapter(horizontalList,this));
+
+
+       // horizontalRecycler.setLayoutManager(horizontalLayoutManager);
+       // horizontalRecycler.setAdapter( new Recycler_View_Adapter(horizontalList,this));
 
 
         Log.e(App.TAG, App.currentTime());
@@ -116,13 +122,13 @@ public class DailyReport extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                //adapter = new HorizontalRecyclerAdapter(horizontalList,DailyReport.this);
-               // horizontalRecycler.setAdapter( new HorizontalRecyclerAdapter(horizontalList,DailyReport.this));
+                horizontalRecycler.setLayoutManager(horizontalLayoutManager);
+                horizontalRecycler.setAdapter( new Recycler_View_Adapter(horizontalList,DailyReport.this));
 
                 Log.e(App.TAG,"call adapter"+ App.currentTime());
 
             }
-        }, 100);
+        }, 300);
  
 
     }
@@ -260,18 +266,11 @@ public class DailyReport extends AppCompatActivity {
             holder.txtDate.setText(dailyReport.getToDay()+"");
             holder.txtDate.setBackground(new MyStyle().getShape());
 
-            if(dailyReport.getProfessionalWork() == 0) {
-                holder.txtProfessionalWorkd.setText("");
-            }else{
-                holder.txtProfessionalWorkd.setText(dailyReport.getProfessionalWork() + "");
-            }
 
-            if(dailyReport.getAcademicStudy() == 0) {
-                holder.txtAcademicStudy.setText("");
+            holder.txtProfessionalWorkd.setText(StrParser.parseIntToString(dailyReport.getProfessionalWork()));
 
-            }else{
-                holder.txtAcademicStudy.setText(dailyReport.getAcademicStudy() + "");
-            }
+            holder.txtAcademicStudy.setText(StrParser.parseIntToString(dailyReport.getAcademicStudy()));
+
 
             if(dailyReport.isQuranStudy()){
                 holder.checkQuranStudy.setChecked(dailyReport.isQuranStudy());

@@ -17,13 +17,17 @@ import android.widget.Toast;
 
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.Worker.DoubleParser;
+import com.jolpai.doctorsdiary.Worker.GetData;
 import com.jolpai.doctorsdiary.Worker.IntParser;
 import com.jolpai.doctorsdiary.Realm_Model.DailyReport;
 import com.jolpai.doctorsdiary.Worker.SaveData;
+import com.jolpai.doctorsdiary.Worker.StrParser;
 
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import io.realm.RealmResults;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -135,6 +139,13 @@ public class ReportAddEdit extends Fragment  {
         Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         Button btnSave =(Button) toolbar.findViewById(R.id.btnSave);
         initialization(view);
+        final RealmResults<DailyReport> reportList = GetData.getOneDayReportFromRealm(getContext(), (Class)DailyReport.class);
+
+        if(reportList.size()>0){
+            DailyReport report =reportList.get(0);
+            setDataToReportInterface(report);
+        }
+
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,6 +168,7 @@ public class ReportAddEdit extends Fragment  {
                 report.setToDay(day);
                 report.setMonth(month);
                 report.setYear(year);
+
                 report.setProfessionalWork(IntParser.parseStrToInt(editProfessionalWorkd.getText().toString()));
                 report.setAcademicStudy(IntParser.parseStrToInt(editAcademicStudy.getText().toString()));
                 report.setQuranStudy(checkQuranStudy.isChecked());
@@ -174,18 +186,95 @@ public class ReportAddEdit extends Fragment  {
                 report.setReportKeeping(checkReportKeeping.isChecked());
                 report.setSelfAssessment(checkSelfAssessment.isChecked());
 
+                report.setHasReport(checkReportStatus(report));
 
                 SaveData.saveDataToRealm(getContext(),report,(Class)DailyReport.class);
 
                 getActivity().finish();
 
-               // RealmResults<DailyReport> results = GetData.getDataFromRealm(getContext(),(Class)DailyReport.class);
+               // RealmResults<DailyReport> results = GetData.getOneMonthReportFromRealm(getContext(),(Class)DailyReport.class);
 
 
             }
         });
 
         return view;
+    }
+
+    private void setDataToReportInterface(DailyReport report) {
+
+        txtDate.setText(report.getDate());
+        editProfessionalWorkd.setText(StrParser.parseIntToString(report.getProfessionalWork()));
+        editAcademicStudy.setText(StrParser.parseIntToString(report.getAcademicStudy()));
+        editHadithStudy.setText(StrParser.parseIntToString(report.getHadithStudy()));
+        editLiteratureStudy.setText(StrParser.parseIntToString(report.getLiteratureStudy()));
+        editSalatWithJamaat.setText(StrParser.parseIntToString(report.getSalatwithJamaat()));
+        editParticipantIntentContact.setText(StrParser.parseIntToString(report.getParticipantIntentContact()));
+        editVolunteerIntentContact.setText(StrParser.parseIntToString(report.getVolunteerIntentContact()));
+
+        editMemberIntentContact.setText(StrParser.parseIntToString(report.getMemberIntentContact()));
+        editContact.setText(StrParser.parseIntToString(report.getContact()));
+        editBookDistribution.setText(StrParser.parseIntToString(report.getBookDistribution()));
+        editSocietyWork.setText(StrParser.parseDoubleToString(report.getSocietyWork()));
+
+        checkQuranStudy.setChecked(report.isQuranStudy());
+        checkFamilyMeeting.setChecked(report.isFamilyMeeting());
+        checkVisit.setChecked(report.isVisit());
+        checkReportKeeping.setChecked(report.isReportKeeping());
+        checkSelfAssessment.setChecked(report.isSelfAssessment());
+    }
+
+    private boolean checkReportStatus(DailyReport report) {
+        if(report.getProfessionalWork()!= 0){
+            return true;
+        }
+        if(report.getAcademicStudy()!= 0){
+            return true;
+        }
+        if(report.isQuranStudy()){
+            return true;
+        }
+        if(report.getHadithStudy()!=0){
+            return true;
+        }
+        if(report.getLiteratureStudy()!=0){
+            return true;
+        }
+        if(report.getSalatwithJamaat()!=0){
+            return true;
+        }
+        if(report.getParticipantIntentContact()!=0){
+            return true;
+        }
+        if(report.getVolunteerIntentContact()!=0) {
+           return true;
+        }
+        if(report.getMemberIntentContact()!=0){
+            return true;
+        }
+        if(report.getContact()!=0){
+            return true;
+        }
+        if(report.getBookDistribution()!=0){
+            return true;
+        }
+        if(report.isFamilyMeeting()){
+            return true;
+        }
+        if(report.getSocietyWork()!= 0.0){
+            return true;
+        }
+        if(report.isVisit()){
+            return true;
+        }
+        if(report.isReportKeeping()){
+            return true;
+        }
+        if(report.isSelfAssessment()){
+            return true;
+        }
+
+        return false;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

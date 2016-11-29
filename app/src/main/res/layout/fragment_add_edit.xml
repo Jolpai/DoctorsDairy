@@ -27,7 +27,7 @@
                    style="@style/LinearLandscapeReportHeaderColor_blue_500">
 
                    <TextView
-                       android:id="@+id/txtDate"
+
                        style="@style/landScapeHeaderTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -240,11 +240,11 @@
                    style="@style/LinearLandscapeReportFooterColor_blue_500">
 
                    <TextView
+                       android:id="@+id/txtDate"
                        style="@style/landScapeHeaderTextStyle"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
-
-                       android:text="1"/>
+                       android:text=""/>
 
                </LinearLayout>
 

@@ -9,14 +9,14 @@ import android.util.Log;
 public class IntParser {
 
     public static int parseStrToInt(String string){
-        int number=0;
+        if(string.equalsIgnoreCase(""))
+            return 0;
         try{
-            number=Integer.parseInt(string);
+            return Integer.parseInt(string);
         }catch (NumberFormatException ex){
             Log.e("EX",ex.toString());
         }
-
-        return number;
+        return 0;
 
     }
 }
