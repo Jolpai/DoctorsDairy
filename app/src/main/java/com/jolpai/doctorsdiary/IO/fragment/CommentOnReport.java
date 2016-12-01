@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jolpai.doctorsdiary.R;
+import com.jolpai.doctorsdiary.Worker.IntParser;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,14 +21,15 @@ import com.jolpai.doctorsdiary.R;
  * create an instance of this fragment.
  */
 public class CommentOnReport extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String YEAR = "YEAR";
+    private static final String MONTH = "MONTH";
+    private static final String DAY="DAY";
+
+    private int year;
+    private int month;
+    private int day;
 
     private OnFragmentInteractionListener mListener;
 
@@ -39,17 +41,19 @@ public class CommentOnReport extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param year Parameter 1. selected year by uers
+     * @param month Parameter 2. selected month of @param year
+     * @param day Parameter 3. selected day of @param month
      * @return A new instance of fragment CommentOnReport.
      */
     // TODO: Rename and change types and number of parameters
-    public static CommentOnReport newInstance(int param1, String param2) {
+    public static CommentOnReport newInstance(String year, String month,String day) {
         CommentOnReport fragment = new CommentOnReport();
-        Bundle args = new Bundle();
-        args.putInt(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
+        Bundle bundle = new Bundle();
+        bundle.putString(YEAR, year);
+        bundle.putString(MONTH, month);
+        bundle.putString(DAY,day);
+        fragment.setArguments(bundle);
         return fragment;
     }
 
@@ -57,9 +61,11 @@ public class CommentOnReport extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            year = IntParser.parseStrToInt(getArguments().getString(YEAR));
+            month = IntParser.parseStrToInt(getArguments().getString(MONTH));
+            day = IntParser.parseStrToInt(getArguments().getString(DAY));
         }
+        setHasOptionsMenu(true);
     }
 
     @Override

@@ -23,13 +23,15 @@ import android.widget.LinearLayout;
 
 import com.andexert.library.RippleView;
 import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.IO.custom_view.VerticalTextView;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.IO.custom_view.MyStyle;
 import com.jolpai.doctorsdiary.Worker.GetData;
+import com.jolpai.doctorsdiary.Worker.MyDateFormat;
+import com.jolpai.doctorsdiary.Worker.SaveData;
 import com.jolpai.doctorsdiary.Worker.StrParser;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
@@ -39,13 +41,38 @@ import static com.jolpai.doctorsdiary.App.TAG;
 import static com.jolpai.doctorsdiary.App.currentTime;
 
 public class DailyReport extends AppCompatActivity {
+    private static final String YEAR="YEAR";
+    private static final String MONTH="MONTH";
+
     LinearLayout llReportHeader,llDate;
     RippleView llFooterDate;
+
+    TextView avrgTotalDay,
+            avrgProfessionalWork,
+            avrgAcademicStudy,
+            avrgHadithStudy,
+            avrgLiteratureStudy,
+            avrgSalatWithJamaat,
+            avrgParticipantIntentContact,
+            avrgVolunteerIntentContact,
+            avrgMemberIntentContact,
+            avrgContact,
+            avrgBookDistribution,
+            avrgSocietyWork,
+            avrgQuranStudy,
+            avrgFamilyMeeting,
+            avrgVisit,
+            avrgReportKeeping,
+            avrgSelfAssessment;
+    VerticalTextView txtHeaderMonthYear;
 
     RecyclerView horizontalRecycler;
     LinearLayoutManager horizontalLayoutManager;
     int rowRecyclerView;
     int reportPortrait,reportLandscape;
+    int year=0;
+    int month=0;
+    int daysOfMonth=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,50 +98,83 @@ public class DailyReport extends AppCompatActivity {
         Log.e(App.TAG, App.currentTime());
 
         horizontalRecycler = (RecyclerView) findViewById(R.id.horizontalRecycler);
+        txtHeaderMonthYear=(VerticalTextView)findViewById(R.id.txtHeaderMonthYear);
+        avrgTotalDay =(TextView)findViewById(R.id.avrgTotalDay);
+        avrgProfessionalWork =(TextView)findViewById(R.id.avrgProfessionalWork);
+        avrgAcademicStudy =(TextView)findViewById(R.id.avrgAcademicStudy);
+        avrgHadithStudy =(TextView)findViewById(R.id.avrgHadithStudy);
+        avrgLiteratureStudy =(TextView)findViewById(R.id.avrgLiteratureStudy);
+        avrgSalatWithJamaat =(TextView)findViewById(R.id.avrgSalatWithJamaat);
+        avrgParticipantIntentContact =(TextView)findViewById(R.id.avrgParticipantIntentContact);
+        avrgVolunteerIntentContact =(TextView)findViewById(R.id.avrgVolunteerIntentContact);
+        avrgMemberIntentContact =(TextView)findViewById(R.id.avrgMemberIntentContact);
+        avrgContact =(TextView)findViewById(R.id.avrgContact);
+        avrgBookDistribution =(TextView)findViewById(R.id.avrgBookDistribution);
+        avrgSocietyWork =(TextView)findViewById(R.id.avrgSocietyWork);
+        avrgQuranStudy =(TextView)findViewById(R.id.avrgQuranStudy);
+        avrgFamilyMeeting =(TextView)findViewById(R.id.avrgFamilyMeeting);
+        avrgVisit =(TextView)findViewById(R.id.avrgVisit);
+        avrgReportKeeping =(TextView)findViewById(R.id.avrgReportKeeping);
+        avrgSelfAssessment =(TextView)findViewById(R.id.avrgSelfAssessment);
+
+
+        showReportList();
+
+
+    }
+
+    private void showReportList(){
+
+        Intent intent=this.getIntent();
+        if(intent != null){
+            year=intent.getIntExtra(YEAR,0);
+            month=intent.getIntExtra(MONTH,0);
+        }
+        daysOfMonth= MyDateFormat.getNumOfDayOfMonth(year,month-1);
+        txtHeaderMonthYear.setText(MyDateFormat.getMonthName(year,month-1));
 
         final ArrayList<com.jolpai.doctorsdiary.Realm_Model.DailyReport> horizontalList=new ArrayList<>();
         final RealmResults<com.jolpai.doctorsdiary.Realm_Model.DailyReport> reportList =
-                GetData.getOneMonthReportFromRealm(this, (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class);
+                GetData.getOneMonthReportFromRealm(this, (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
 
-        Calendar c = Calendar.getInstance();
-        c.set(Calendar.YEAR, c.get(Calendar.YEAR));
-        c.set(Calendar.MONTH, c.get(Calendar.MONTH));
+        final RealmResults<com.jolpai.doctorsdiary.Realm_Model.DailyReport> avgReportList =
+                GetData.getTotalOneMonthReport(this, (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
 
-        int year = c.get(Calendar.YEAR);
-        int month = c.get(Calendar.MONTH)+1;
-        int dd = c.get(Calendar.DAY_OF_MONTH);
-        int numDays = c.getActualMaximum(Calendar.DATE);
+        final String totalQuranStudiedDay =GetData.getTotalQuranStudyDay(DailyReport.this,
+                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+
+        final String totalFamilyMeetingDay=GetData.getTotalFamilyMeetingDay(DailyReport.this,
+                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+
+        final String totalVisitedDay= GetData.getTotalVisitDay(DailyReport.this,
+                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+
+        final String totalReportKeepingDay=GetData.getTotalReportKeepingDay(DailyReport.this,
+                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+
+        final String totalSelfAssessmentDay=GetData.getTotalSelfAssessmentDay(DailyReport.this,
+                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+
 
         for (int i=0;i<reportList.size();i++){
 
             horizontalList.add(reportList.get(i));
-            if(i==reportList.size()-1){
-                for(;i<numDays;i++){
-                    com.jolpai.doctorsdiary.Realm_Model.DailyReport report=new com.jolpai.doctorsdiary.Realm_Model.DailyReport();
-                    report.setToDay(i+1);
-                    report.setYear(year);
-                    report.setMonth(month);
-                    horizontalList.add(report);
-                }
-            }
         }
-        Collections.sort(horizontalList);
+
         if(reportList.size()==0){
-            for(int i=0;i<numDays;i++){
-                com.jolpai.doctorsdiary.Realm_Model.DailyReport report=new com.jolpai.doctorsdiary.Realm_Model.DailyReport();
+            for(int i=0;i<daysOfMonth;i++){
+                com.jolpai.doctorsdiary.Realm_Model.DailyReport report=
+                        new com.jolpai.doctorsdiary.Realm_Model.DailyReport();
                 report.setToDay(i+1);
                 report.setYear(year);
                 report.setMonth(month);
-                //SaveData.saveDataToRealm(this,report,(Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class);
+                report.setDate(MyDateFormat.getDateDDMMYY(year,month,i+1));
+                SaveData.saveDataToRealm(this,report,(Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class);
                 horizontalList.add(report);
             }
         }
 
-
-
-       // horizontalRecycler.setLayoutManager(horizontalLayoutManager);
-       // horizontalRecycler.setAdapter( new Recycler_View_Adapter(horizontalList,this));
-
+        Collections.sort(horizontalList);
 
         Log.e(App.TAG, App.currentTime());
 
@@ -127,9 +187,34 @@ public class DailyReport extends AppCompatActivity {
 
                 Log.e(App.TAG,"call adapter"+ App.currentTime());
 
+
+                avrgTotalDay.setText(StrParser.parseIntToString(avgReportList.size()));
+
+                avrgProfessionalWork.setText(StrParser.parseNumberToString(avgReportList.sum("professionalWork")));
+                avrgAcademicStudy.setText(StrParser.parseNumberToString(avgReportList.sum("academicStudy")));
+                avrgQuranStudy.setText(totalQuranStudiedDay);
+                avrgHadithStudy.setText(StrParser.parseNumberToString(avgReportList.sum("hadithStudy")));
+                avrgLiteratureStudy.setText(StrParser.parseNumberToString(avgReportList.sum("literatureStudy")));
+                avrgSalatWithJamaat.setText(StrParser.parseNumberToString(avgReportList.sum("salatwithJamaat")));
+                avrgParticipantIntentContact.setText(StrParser.parseNumberToString(avgReportList.sum("participantIntentContact")));
+                avrgVolunteerIntentContact.setText(StrParser.parseNumberToString(avgReportList.sum("volunteerIntentContact")));
+                avrgMemberIntentContact.setText(StrParser.parseNumberToString(avgReportList.sum("memberIntentContact")));
+                avrgContact.setText(StrParser.parseNumberToString(avgReportList.sum("contact")));
+                avrgBookDistribution.setText(StrParser.parseNumberToString(avgReportList.sum("bookDistribution")));
+                avrgSocietyWork.setText(StrParser.parseNumberToString(avgReportList.sum("societyWork")));
+                avrgFamilyMeeting.setText(totalFamilyMeetingDay);
+                avrgVisit.setText(totalVisitedDay);
+                avrgReportKeeping.setText(totalReportKeepingDay);
+                avrgSelfAssessment.setText(totalSelfAssessmentDay);
+
             }
         }, 300);
- 
+
+
+
+
+
+
 
     }
 
@@ -142,11 +227,11 @@ public class DailyReport extends AppCompatActivity {
             rowRecyclerView=R.layout.row_portrait;
             horizontalLayoutManager = new LinearLayoutManager(DailyReport.this,LinearLayoutManager.VERTICAL,false);
 
-        }else if(orientation == Configuration.ORIENTATION_LANDSCAPE){
+        }/*else if(orientation == Configuration.ORIENTATION_LANDSCAPE){
             setContentView(R.layout.activity_report_landscape);
             rowRecyclerView=R.layout.row_landscape;
            horizontalLayoutManager = new LinearLayoutManager(DailyReport.this,LinearLayoutManager.HORIZONTAL,false);
-        }
+        }*/
     }
     private void setWidthAndHeight(){
         llReportHeader = (LinearLayout) findViewById(R.id.llReportHeader);

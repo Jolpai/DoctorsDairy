@@ -1,5 +1,6 @@
 package com.jolpai.doctorsdiary.Worker;
 
+import android.icu.text.NumberFormat;
 import android.util.Log;
 
 /**
@@ -29,5 +30,9 @@ public class StrParser {
             Log.e("EX",ex.toString());
         }
         return "";
+    }
+
+    public static String parseNumberToString(Number number){
+        return number+"";
     }
 }

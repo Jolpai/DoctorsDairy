@@ -16,6 +16,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import com.jolpai.doctorsdiary.App;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.IO.activity.DailyReport;
+import com.jolpai.doctorsdiary.Worker.MyDateFormat;
 
 import java.util.ArrayList;
 
@@ -32,6 +33,8 @@ public class MonthForReport extends Fragment implements View.OnClickListener {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final String YEAR="YEAR";
+    private static final String MONTH="MONTH";
 
     public View ripleJanuary,ripleFebruary,ripleMarch,ripleApril,ripleMay,ripleJune,
             ripleJuly,ripleAugust,ripleSeptember,ripleOctober,ripleNovember,ripleDecember,allMonth;
@@ -166,42 +169,43 @@ public class MonthForReport extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         int id=v.getId();
+        int year=2016;
         switch (id){
             case R.id.ripleJanuary:
-                //ToDo
+                openActivity(year,1);
                 break;
             case R.id.ripleFebruary:
-
+                openActivity(year,2);
                 break;
             case R.id.ripleMarch:
-
+                openActivity(year,3);
                 break;
             case R.id.ripleApril:
-
+                openActivity(year,4);
                 break;
             case R.id.ripleMay:
-
+                openActivity(year,5);
                 break;
             case R.id.ripleJune:
-
+                openActivity(year,6);
                 break;
             case R.id.ripleJuly:
-
+                openActivity(year,7);
                 break;
             case R.id.ripleAugust:
-
+                openActivity(year,8);
                 break;
             case R.id.ripleSeptember:
-
+                openActivity(year,9);
                 break;
             case R.id.ripleOctober:
-                openActivity();
+                openActivity(year,10);
                 break;
             case R.id.ripleNovember:
-
+                openActivity(year,11);
                 break;
             case R.id.ripleDecember:
-
+                openActivity(year,12);
                 break;
             default:
                 break;
@@ -209,9 +213,11 @@ public class MonthForReport extends Fragment implements View.OnClickListener {
         }
     }
 
-    private void openActivity(){
-        Intent inent = new Intent(getContext(),DailyReport.class);
-        getContext().startActivity(inent);
+    private void openActivity(int year,int month){
+        Intent intent = new Intent(getContext(),DailyReport.class);
+        intent.putExtra(YEAR,year);
+        intent.putExtra(MONTH,month);
+        getContext().startActivity(intent);
     }
 
     private void init(View view){
@@ -247,7 +253,7 @@ public class MonthForReport extends Fragment implements View.OnClickListener {
 
     private void setAnimation() {
 
-        int month = 10;
+        int month = MyDateFormat.getCurrentMonth();
         switch (month) {
             case 1:
                 ripleJanuary.startAnimation(App.blinkAnim());

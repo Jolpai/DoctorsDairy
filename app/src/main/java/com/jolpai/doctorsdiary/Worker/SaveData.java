@@ -23,7 +23,8 @@ public class SaveData {
             @Override
             public void execute(Realm realm) {
                 //RealmObject planForMonth = realm.createObject(clazz);
-                realm.copyToRealm(obj);
+               // realm.copyToRealm(obj);
+                realm.copyToRealmOrUpdate(obj);
             }
         },new Realm.Transaction.OnSuccess(){
             @Override

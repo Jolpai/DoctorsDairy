@@ -10,9 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.Worker.BlinkAnimator;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.IO.activity.MonthlyPlan;
+import com.jolpai.doctorsdiary.Worker.MyDateFormat;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -216,43 +217,43 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
 
     private void setAnimation() {
 
-        int month=10;
+        int month= MyDateFormat.getCurrentMonth();
         switch (month){
             case 1:
-                ripleJanuary.startAnimation(App.blinkAnim());
+                ripleJanuary.startAnimation(BlinkAnimator.blink());
                 break;
             case 2:
-                ripleFebruary.startAnimation(App.blinkAnim());
+                ripleFebruary.startAnimation(BlinkAnimator.blink());
                 break;
             case 3:
-                ripleMarch.startAnimation(App.blinkAnim());
+                ripleMarch.startAnimation(BlinkAnimator.blink());
                 break;
             case 4:
-                ripleApril.startAnimation(App.blinkAnim());
+                ripleApril.startAnimation(BlinkAnimator.blink());
                 break;
             case 5:
-                ripleMay.startAnimation(App.blinkAnim());
+                ripleMay.startAnimation(BlinkAnimator.blink());
                 break;
             case 6:
-                ripleJune.startAnimation(App.blinkAnim());
+                ripleJune.startAnimation(BlinkAnimator.blink());
                 break;
             case 7:
-                ripleJuly.startAnimation(App.blinkAnim());
+                ripleJuly.startAnimation(BlinkAnimator.blink());
                 break;
             case 8:
-                ripleAugust.startAnimation(App.blinkAnim());
+                ripleAugust.startAnimation(BlinkAnimator.blink());
                 break;
             case 9:
-                ripleSeptember.startAnimation(App.blinkAnim());
+                ripleSeptember.startAnimation(BlinkAnimator.blink());
                 break;
             case 10:
-                ripleOctober.startAnimation(App.blinkAnim());
+                ripleOctober.startAnimation(BlinkAnimator.blink());
                 break;
             case 11:
-                ripleNovember.startAnimation(App.blinkAnim());
+                ripleNovember.startAnimation(BlinkAnimator.blink());
                 break;
             case 12:
-                ripleDecember.startAnimation(App.blinkAnim());
+                ripleDecember.startAnimation(BlinkAnimator.blink());
                 break;
             case 0:
                 break;

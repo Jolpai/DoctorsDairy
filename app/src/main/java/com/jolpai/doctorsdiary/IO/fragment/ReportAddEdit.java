@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 
 import com.jolpai.doctorsdiary.R;
+import com.jolpai.doctorsdiary.Worker.MyDateFormat;
 import com.jolpai.doctorsdiary.Worker.DoubleParser;
 import com.jolpai.doctorsdiary.Worker.GetData;
 import com.jolpai.doctorsdiary.Worker.IntParser;
@@ -40,14 +41,15 @@ import io.realm.RealmResults;
 public class ReportAddEdit extends Fragment  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String YEAR = "";
-    private static final String MONTH = "";
-    private static final String DAY="";
+    private static final String YEAR = "YEAR";
+    private static final String MONTH = "MONTH";
+    private static final String DAY="DAY";
 
     // TODO: Rename and change types of parameters
     private int year;
     private int month;
     private int day;
+    private String reportingDate;
 
     private TextView txtDate;
     private EditText
@@ -87,12 +89,12 @@ public class ReportAddEdit extends Fragment  {
      * @return A new instance of fragment ReportAddEdit.
      */
     // TODO: Rename and change types and number of parameters
-    public static ReportAddEdit newInstance(int year, int month,int day) {
+    public static ReportAddEdit newInstance(String year, String month,String day) {
         ReportAddEdit fragment = new ReportAddEdit();
         Bundle bundle = new Bundle();
-        bundle.putInt(YEAR, year);
-        bundle.putInt(MONTH, month);
-        bundle.putInt(DAY,day);
+        bundle.putString(YEAR, year);
+        bundle.putString(MONTH, month);
+        bundle.putString(DAY,day);
 
         fragment.setArguments(bundle);
         return fragment;
@@ -102,9 +104,10 @@ public class ReportAddEdit extends Fragment  {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            year = getArguments().getInt(YEAR);
-            month = getArguments().getInt(MONTH);
-            day = getArguments().getInt(DAY);
+            year = IntParser.parseStrToInt(getArguments().getString(YEAR));
+            month = IntParser.parseStrToInt(getArguments().getString(MONTH));
+            day = IntParser.parseStrToInt(getArguments().getString(DAY));
+            reportingDate = MyDateFormat.getDateDDMMYY(year,month,day);
         }
         setHasOptionsMenu(true);
 
@@ -139,32 +142,28 @@ public class ReportAddEdit extends Fragment  {
         Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         Button btnSave =(Button) toolbar.findViewById(R.id.btnSave);
         initialization(view);
-        final RealmResults<DailyReport> reportList = GetData.getOneDayReportFromRealm(getContext(), (Class)DailyReport.class);
+        final RealmResults<DailyReport> reportList = GetData.getOneDayReportFromRealm(getContext(), (Class)DailyReport.class,reportingDate);
 
         if(reportList.size()>0){
             DailyReport report =reportList.get(0);
             setDataToReportInterface(report);
+            if(report.isHasReport()) {
+                btnSave.setText("Update");
+            }else{
+                btnSave.setText("Save");
+            }
+
+        }else{
+            txtDate.setText(reportingDate);
         }
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"clicked",Toast.LENGTH_SHORT).show();
-                //
-                Calendar c = Calendar.getInstance();
-                System.out.println("Current time => " + c.getTime());
-
-                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
-                String fDate = df.format(c.getTime());
-
-
-               // int yy = c.get(Calendar.YEAR);
-               // int mm = c.get(Calendar.MONTH)+1;
-               // int dd = c.get(Calendar.DAY_OF_MONTH);
 
 
                 DailyReport report = new DailyReport();
-                report.setDate(fDate);
+                report.setDate(reportingDate);
                 report.setToDay(day);
                 report.setMonth(month);
                 report.setYear(year);
@@ -192,9 +191,7 @@ public class ReportAddEdit extends Fragment  {
 
                 getActivity().finish();
 
-               // RealmResults<DailyReport> results = GetData.getOneMonthReportFromRealm(getContext(),(Class)DailyReport.class);
-
-
+                Toast.makeText(getActivity(),"Action Successfully Done",Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -151,24 +151,23 @@
 
         <LinearLayout
             style="@style/LinearPortraitReportRow">
-
-            <TextView
-                android:id="@+id/txtSocietyWork"
-                style="@style/landScapeRowTextStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/LinearPortraitReportRow">
-
             <CheckBox
                 android:id="@+id/checkFamilyMeeting"
                 style="@style/landScapeRowTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clickable="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearPortraitReportRow">
+
+            <TextView
+                android:id="@+id/txtSocietyWork"
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 

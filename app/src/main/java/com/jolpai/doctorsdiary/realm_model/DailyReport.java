@@ -3,13 +3,17 @@ package com.jolpai.doctorsdiary.Realm_Model;
 import java.io.Serializable;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by User on 11/13/2016.
  */
 
 public class DailyReport extends RealmObject implements Serializable,Comparable{
+
+    @PrimaryKey
     private String date;
+
     private int toDay;
     private int month;
     private int year;

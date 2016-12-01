@@ -23,6 +23,7 @@ public class App extends Application {
     public static String TAG="TAG";
     public static String SDK_VERSION;
     public static String ACTION_MSG="ACTION_MSG";
+    public static String EXCEPTION="EXCEPTION";
 
 
     @Override

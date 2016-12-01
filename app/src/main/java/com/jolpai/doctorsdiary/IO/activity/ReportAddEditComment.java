@@ -14,6 +14,7 @@ import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.IO.fragment.ReportAddEdit;
 import com.jolpai.doctorsdiary.IO.fragment.CommentOnReport;
 import com.jolpai.doctorsdiary.Worker.IntParser;
+import com.jolpai.doctorsdiary.Worker.StrParser;
 
 public class ReportAddEditComment extends AppCompatActivity {
     FragmentPagerAdapter pagerAdapter;
@@ -55,11 +56,10 @@ public class ReportAddEditComment extends AppCompatActivity {
         tab.setUnderlineHeight(1);
         tab.setIndicatorHeight(10);
 
-        Intent intent = this.getIntent();;
+        Intent intent = this.getIntent();
         year= IntParser.parseStrToInt(intent.getStringExtra("year"));
         month=IntParser.parseStrToInt(intent.getStringExtra("month"));
         day=IntParser.parseStrToInt(intent.getStringExtra("day"));
-
     }
 
 
@@ -81,9 +81,13 @@ public class ReportAddEditComment extends AppCompatActivity {
 
             switch (position){
                 case 0:
-                    return ReportAddEdit.newInstance(year,month,day);
+                    return ReportAddEdit.newInstance(StrParser.parseIntToString(year),
+                            StrParser.parseIntToString(month),
+                            StrParser.parseIntToString(day));
                 case 1:
-                    return CommentOnReport.newInstance(0,"");
+                    return CommentOnReport.newInstance(StrParser.parseIntToString(year),
+                            StrParser.parseIntToString(month),
+                            StrParser.parseIntToString(day));
                 default:
                     return null;
             }

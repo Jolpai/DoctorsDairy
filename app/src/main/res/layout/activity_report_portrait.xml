@@ -27,6 +27,7 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <com.jolpai.doctorsdiary.IO.custom_view.VerticalTextView
+                            android:id="@+id/txtHeaderMonthYear"
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -265,10 +266,11 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgTotalDay"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="1"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -277,10 +279,11 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgProfessionalWork"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="2"/>
+                            android:text=""/>
 
 
 
@@ -290,34 +293,24 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgAcademicStudy"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="3"/>
+                            android:text=""/>
 
                     </LinearLayout>
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgQuranStudy"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="4"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
-
-                        <TextView
-                            style="@style/TextViewPortraitReportFooter"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:text="5"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -325,11 +318,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgHadithStudy"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="6"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -337,11 +331,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgLiteratureStudy"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="7"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -349,11 +344,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgSalatWithJamaat"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="8"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -361,11 +357,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgParticipantIntentContact"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="9"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -373,11 +370,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgVolunteerIntentContact"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="10"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -385,11 +383,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgMemberIntentContact"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="11"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -397,11 +396,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgContact"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="12"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -409,11 +409,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgBookDistribution"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="13"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -421,11 +422,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgFamilyMeeting"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="14"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -433,11 +435,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgSocietyWork"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="15"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -445,11 +448,12 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgVisit"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="16"/>
+                            android:text=""/>
 
                     </LinearLayout>
 
@@ -457,11 +461,25 @@
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
                         <TextView
+                            android:id="@+id/avrgReportKeeping"
                             style="@style/TextViewPortraitReportFooter"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:text="17"/>
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgSelfAssessment"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
 
                     </LinearLayout>
 
