@@ -73,7 +73,7 @@ public class MonthlyPlan extends AppCompatActivity implements View.OnClickListen
 
        // txtDateContact.setOnClickListener(this);
 
-        saveData();
+       // saveData();
     }
 
 

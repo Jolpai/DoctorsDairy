@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,10 @@ import android.widget.TextView;
 import android.widget.LinearLayout;
 
 import com.andexert.library.RippleView;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.jolpai.doctorsdiary.App;
 import com.jolpai.doctorsdiary.IO.custom_view.VerticalTextView;
 import com.jolpai.doctorsdiary.R;
@@ -41,10 +46,10 @@ import static com.jolpai.doctorsdiary.App.TAG;
 import static com.jolpai.doctorsdiary.App.currentTime;
 
 public class DailyReport extends AppCompatActivity {
-    private static final String YEAR="YEAR";
-    private static final String MONTH="MONTH";
+    private static final String YEAR = "YEAR";
+    private static final String MONTH = "MONTH";
 
-    LinearLayout llReportHeader,llDate;
+    LinearLayout llReportHeader, llDate;
     RippleView llFooterDate;
 
     TextView avrgTotalDay,
@@ -69,25 +74,33 @@ public class DailyReport extends AppCompatActivity {
     RecyclerView horizontalRecycler;
     LinearLayoutManager horizontalLayoutManager;
     int rowRecyclerView;
-    int reportPortrait,reportLandscape;
-    int year=0;
-    int month=0;
-    int daysOfMonth=0;
+    int reportPortrait, reportLandscape;
+    int year = 0;
+    int month = 0;
+    int daysOfMonth = 0;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e(App.TAG,"DailyReport");
+        Log.e(App.TAG, "DailyReport");
 
         hideStatusBar();
         checkOrientation();
         //initialize();
 
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
 
     private void hideStatusBar() {
-        if(Build.VERSION.SDK_INT >= 16){
+        if (Build.VERSION.SDK_INT >= 16) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
@@ -98,24 +111,24 @@ public class DailyReport extends AppCompatActivity {
         Log.e(App.TAG, App.currentTime());
 
         horizontalRecycler = (RecyclerView) findViewById(R.id.horizontalRecycler);
-        txtHeaderMonthYear=(VerticalTextView)findViewById(R.id.txtHeaderMonthYear);
-        avrgTotalDay =(TextView)findViewById(R.id.avrgTotalDay);
-        avrgProfessionalWork =(TextView)findViewById(R.id.avrgProfessionalWork);
-        avrgAcademicStudy =(TextView)findViewById(R.id.avrgAcademicStudy);
-        avrgHadithStudy =(TextView)findViewById(R.id.avrgHadithStudy);
-        avrgLiteratureStudy =(TextView)findViewById(R.id.avrgLiteratureStudy);
-        avrgSalatWithJamaat =(TextView)findViewById(R.id.avrgSalatWithJamaat);
-        avrgParticipantIntentContact =(TextView)findViewById(R.id.avrgParticipantIntentContact);
-        avrgVolunteerIntentContact =(TextView)findViewById(R.id.avrgVolunteerIntentContact);
-        avrgMemberIntentContact =(TextView)findViewById(R.id.avrgMemberIntentContact);
-        avrgContact =(TextView)findViewById(R.id.avrgContact);
-        avrgBookDistribution =(TextView)findViewById(R.id.avrgBookDistribution);
-        avrgSocietyWork =(TextView)findViewById(R.id.avrgSocietyWork);
-        avrgQuranStudy =(TextView)findViewById(R.id.avrgQuranStudy);
-        avrgFamilyMeeting =(TextView)findViewById(R.id.avrgFamilyMeeting);
-        avrgVisit =(TextView)findViewById(R.id.avrgVisit);
-        avrgReportKeeping =(TextView)findViewById(R.id.avrgReportKeeping);
-        avrgSelfAssessment =(TextView)findViewById(R.id.avrgSelfAssessment);
+        txtHeaderMonthYear = (VerticalTextView) findViewById(R.id.txtHeaderMonthYear);
+        avrgTotalDay = (TextView) findViewById(R.id.avrgTotalDay);
+        avrgProfessionalWork = (TextView) findViewById(R.id.avrgProfessionalWork);
+        avrgAcademicStudy = (TextView) findViewById(R.id.avrgAcademicStudy);
+        avrgHadithStudy = (TextView) findViewById(R.id.avrgHadithStudy);
+        avrgLiteratureStudy = (TextView) findViewById(R.id.avrgLiteratureStudy);
+        avrgSalatWithJamaat = (TextView) findViewById(R.id.avrgSalatWithJamaat);
+        avrgParticipantIntentContact = (TextView) findViewById(R.id.avrgParticipantIntentContact);
+        avrgVolunteerIntentContact = (TextView) findViewById(R.id.avrgVolunteerIntentContact);
+        avrgMemberIntentContact = (TextView) findViewById(R.id.avrgMemberIntentContact);
+        avrgContact = (TextView) findViewById(R.id.avrgContact);
+        avrgBookDistribution = (TextView) findViewById(R.id.avrgBookDistribution);
+        avrgSocietyWork = (TextView) findViewById(R.id.avrgSocietyWork);
+        avrgQuranStudy = (TextView) findViewById(R.id.avrgQuranStudy);
+        avrgFamilyMeeting = (TextView) findViewById(R.id.avrgFamilyMeeting);
+        avrgVisit = (TextView) findViewById(R.id.avrgVisit);
+        avrgReportKeeping = (TextView) findViewById(R.id.avrgReportKeeping);
+        avrgSelfAssessment = (TextView) findViewById(R.id.avrgSelfAssessment);
 
 
         showReportList();
@@ -123,53 +136,53 @@ public class DailyReport extends AppCompatActivity {
 
     }
 
-    private void showReportList(){
+    private void showReportList() {
 
-        Intent intent=this.getIntent();
-        if(intent != null){
-            year=intent.getIntExtra(YEAR,0);
-            month=intent.getIntExtra(MONTH,0);
+        Intent intent = this.getIntent();
+        if (intent != null) {
+            year = intent.getIntExtra(YEAR, 0);
+            month = intent.getIntExtra(MONTH, 0);
         }
-        daysOfMonth= MyDateFormat.getNumOfDayOfMonth(year,month-1);
-        txtHeaderMonthYear.setText(MyDateFormat.getMonthName(year,month-1));
+        daysOfMonth = MyDateFormat.getNumOfDayOfMonth(year, month - 1);
+        txtHeaderMonthYear.setText(MyDateFormat.getMonthName(year, month - 1));
 
-        final ArrayList<com.jolpai.doctorsdiary.Realm_Model.DailyReport> horizontalList=new ArrayList<>();
+        final ArrayList<com.jolpai.doctorsdiary.Realm_Model.DailyReport> horizontalList = new ArrayList<>();
         final RealmResults<com.jolpai.doctorsdiary.Realm_Model.DailyReport> reportList =
-                GetData.getOneMonthReportFromRealm(this, (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+                GetData.getOneMonthReportFromRealm(this, (Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class, year, month);
 
         final RealmResults<com.jolpai.doctorsdiary.Realm_Model.DailyReport> avgReportList =
-                GetData.getTotalOneMonthReport(this, (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+                GetData.getTotalOneMonthReport(this, (Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class, year, month);
 
-        final String totalQuranStudiedDay =GetData.getTotalQuranStudyDay(DailyReport.this,
-                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+        final String totalQuranStudiedDay = GetData.getTotalQuranStudyDay(DailyReport.this,
+                (Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class, year, month);
 
-        final String totalFamilyMeetingDay=GetData.getTotalFamilyMeetingDay(DailyReport.this,
-                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+        final String totalFamilyMeetingDay = GetData.getTotalFamilyMeetingDay(DailyReport.this,
+                (Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class, year, month);
 
-        final String totalVisitedDay= GetData.getTotalVisitDay(DailyReport.this,
-                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+        final String totalVisitedDay = GetData.getTotalVisitDay(DailyReport.this,
+                (Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class, year, month);
 
-        final String totalReportKeepingDay=GetData.getTotalReportKeepingDay(DailyReport.this,
-                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+        final String totalReportKeepingDay = GetData.getTotalReportKeepingDay(DailyReport.this,
+                (Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class, year, month);
 
-        final String totalSelfAssessmentDay=GetData.getTotalSelfAssessmentDay(DailyReport.this,
-                (Class)com.jolpai.doctorsdiary.Realm_Model.DailyReport.class,year,month);
+        final String totalSelfAssessmentDay = GetData.getTotalSelfAssessmentDay(DailyReport.this,
+                (Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class, year, month);
 
 
-        for (int i=0;i<reportList.size();i++){
+        for (int i = 0; i < reportList.size(); i++) {
 
             horizontalList.add(reportList.get(i));
         }
 
-        if(reportList.size()==0){
-            for(int i=0;i<daysOfMonth;i++){
-                com.jolpai.doctorsdiary.Realm_Model.DailyReport report=
+        if (reportList.size() == 0) {
+            for (int i = 0; i < daysOfMonth; i++) {
+                com.jolpai.doctorsdiary.Realm_Model.DailyReport report =
                         new com.jolpai.doctorsdiary.Realm_Model.DailyReport();
-                report.setToDay(i+1);
+                report.setToDay(i + 1);
                 report.setYear(year);
                 report.setMonth(month);
-                report.setDate(MyDateFormat.getDateDDMMYY(year,month,i+1));
-                SaveData.saveDataToRealm(this,report,(Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class);
+                report.setDate(MyDateFormat.getDateDDMMYY(year, month, i + 1));
+                SaveData.saveDataToRealm(this, report, (Class) com.jolpai.doctorsdiary.Realm_Model.DailyReport.class);
                 horizontalList.add(report);
             }
         }
@@ -183,9 +196,9 @@ public class DailyReport extends AppCompatActivity {
             @Override
             public void run() {
                 horizontalRecycler.setLayoutManager(horizontalLayoutManager);
-                horizontalRecycler.setAdapter( new Recycler_View_Adapter(horizontalList,DailyReport.this));
+                horizontalRecycler.setAdapter(new Recycler_View_Adapter(horizontalList, DailyReport.this));
 
-                Log.e(App.TAG,"call adapter"+ App.currentTime());
+                Log.e(App.TAG, "call adapter" + App.currentTime());
 
 
                 avrgTotalDay.setText(StrParser.parseIntToString(avgReportList.size()));
@@ -211,42 +224,45 @@ public class DailyReport extends AppCompatActivity {
         }, 300);
 
 
-
-
-
-
-
     }
 
     // check the device orientation and choose layout file.
-    private void checkOrientation(){
+    private void checkOrientation() {
 
-        int orientation= DailyReport.this.getResources().getConfiguration().orientation;
-        if(orientation == Configuration.ORIENTATION_PORTRAIT) {
+        int orientation = DailyReport.this.getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             setContentView(R.layout.activity_report_portrait);
-            rowRecyclerView=R.layout.row_portrait;
-            horizontalLayoutManager = new LinearLayoutManager(DailyReport.this,LinearLayoutManager.VERTICAL,false);
+            rowRecyclerView = R.layout.row_portrait;
+            horizontalLayoutManager = new LinearLayoutManager(DailyReport.this, LinearLayoutManager.VERTICAL, false);
 
-        }/*else if(orientation == Configuration.ORIENTATION_LANDSCAPE){
+        }else if(orientation == Configuration.ORIENTATION_LANDSCAPE){
+            setContentView(R.layout.activity_report_portrait);
+            rowRecyclerView = R.layout.row_portrait;
+            horizontalLayoutManager = new LinearLayoutManager(DailyReport.this, LinearLayoutManager.VERTICAL, false);
+        }
+
+
+        /*else if(orientation == Configuration.ORIENTATION_LANDSCAPE){
             setContentView(R.layout.activity_report_landscape);
             rowRecyclerView=R.layout.row_landscape;
            horizontalLayoutManager = new LinearLayoutManager(DailyReport.this,LinearLayoutManager.HORIZONTAL,false);
         }*/
     }
-    private void setWidthAndHeight(){
+
+    private void setWidthAndHeight() {
         llReportHeader = (LinearLayout) findViewById(R.id.llReportHeader);
 
-        llDate =(LinearLayout)findViewById(R.id.llDate);
-        llFooterDate =(RippleView) findViewById(R.id.llFooterDate);
+        llDate = (LinearLayout) findViewById(R.id.llDate);
+        llFooterDate = (RippleView) findViewById(R.id.llFooterDate);
 
 
-       final LinearLayout layout = llDate; //(LinearLayout)findViewById(R.id.YOUD VIEW ID);
+        final LinearLayout layout = llDate; //(LinearLayout)findViewById(R.id.YOUD VIEW ID);
         ViewTreeObserver vto = layout.getViewTreeObserver();
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
                 layout.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-                int width  = layout.getMeasuredWidth();
+                int width = layout.getMeasuredWidth();
                 int height = layout.getMeasuredHeight();
 
             }
@@ -260,21 +276,57 @@ public class DailyReport extends AppCompatActivity {
 
     }
 
-    public  void pdfGenerate(View v){
-        Bitmap b = Bitmap.createBitmap( v.getLayoutParams().width, v.getLayoutParams().height, Bitmap.Config.ARGB_8888);
+    public void pdfGenerate(View v) {
+        Bitmap b = Bitmap.createBitmap(v.getLayoutParams().width, v.getLayoutParams().height, Bitmap.Config.ARGB_8888);
         Canvas c = new Canvas(b);
         v.layout(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
         v.draw(c);
     }
 
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
         initialize();
     }
 
-// inner Adapter class for recyclerview
-    public class Recycler_View_Adapter  extends RecyclerView.Adapter<Recycler_View_Adapter.View_Holder> {
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    public Action getIndexApiAction() {
+        Thing object = new Thing.Builder()
+                .setName("DailyReport Page") // TODO: Define a title for the content shown.
+                // TODO: Make sure this auto-generated URL is correct.
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+        client.disconnect();
+    }
+
+    // inner Adapter class for recyclerview
+    public class Recycler_View_Adapter extends RecyclerView.Adapter<Recycler_View_Adapter.View_Holder> {
         private List<com.jolpai.doctorsdiary.Realm_Model.DailyReport> list;
         private Context context;
 
@@ -284,7 +336,7 @@ public class DailyReport extends AppCompatActivity {
         }
 
 
-        public class View_Holder extends RecyclerView.ViewHolder{
+        public class View_Holder extends RecyclerView.ViewHolder {
 
             RippleView llFooterDate;
             TextView txtDate;
@@ -307,28 +359,28 @@ public class DailyReport extends AppCompatActivity {
                     checkReportKeeping,
                     checkSelfAssessment;
 
-            public View_Holder (View itemView){
+            public View_Holder(View itemView) {
                 super(itemView);
-                txtDate =(TextView) itemView.findViewById(R.id.txtDate);
-                txtProfessionalWorkd=(TextView) itemView.findViewById(R.id.txtProfessionalWork);
-                txtAcademicStudy=(TextView) itemView.findViewById(R.id.txtAcademicStudy);
-                txtHadithStudy=(TextView) itemView.findViewById(R.id.txtHadithStudy);
-                txtLiteratureStudy=(TextView) itemView.findViewById(R.id.txtLiteratureStudy);
-                txtSalatWithJamaat=(TextView) itemView.findViewById(R.id.txtSalatWithJamaat);
-                txtParticipantIntentContact=(TextView) itemView.findViewById(R.id.txtParticipantIntentContact);
-                txtVolunteerIntentContact=(TextView) itemView.findViewById(R.id.txtVolunteerIntentContact);
+                txtDate = (TextView) itemView.findViewById(R.id.txtDate);
+                txtProfessionalWorkd = (TextView) itemView.findViewById(R.id.txtProfessionalWork);
+                txtAcademicStudy = (TextView) itemView.findViewById(R.id.txtAcademicStudy);
+                txtHadithStudy = (TextView) itemView.findViewById(R.id.txtHadithStudy);
+                txtLiteratureStudy = (TextView) itemView.findViewById(R.id.txtLiteratureStudy);
+                txtSalatWithJamaat = (TextView) itemView.findViewById(R.id.txtSalatWithJamaat);
+                txtParticipantIntentContact = (TextView) itemView.findViewById(R.id.txtParticipantIntentContact);
+                txtVolunteerIntentContact = (TextView) itemView.findViewById(R.id.txtVolunteerIntentContact);
 
-                txtMemberIntentContact=(TextView) itemView.findViewById(R.id.txtMemberIntentContact);
-                txtContact=(TextView) itemView.findViewById(R.id.txtContact);
-                txtBookDistribution=(TextView) itemView.findViewById(R.id.txtBookDistribution);
-                txtSocietyWork=(TextView) itemView.findViewById(R.id.txtSocietyWork);
+                txtMemberIntentContact = (TextView) itemView.findViewById(R.id.txtMemberIntentContact);
+                txtContact = (TextView) itemView.findViewById(R.id.txtContact);
+                txtBookDistribution = (TextView) itemView.findViewById(R.id.txtBookDistribution);
+                txtSocietyWork = (TextView) itemView.findViewById(R.id.txtSocietyWork);
 
-                checkQuranStudy=(CheckBox) itemView.findViewById(R.id.checkQuranStudy);
-                checkFamilyMeeting=(CheckBox) itemView.findViewById(R.id.checkFamilyMeeting);
-                checkVisit=(CheckBox) itemView.findViewById(R.id.checkVisit);
-                checkReportKeeping=(CheckBox) itemView.findViewById(R.id.checkReportKeeping);
-                checkSelfAssessment=(CheckBox) itemView.findViewById(R.id.checkSelfAssessment);
-                llFooterDate=(RippleView) this.itemView.findViewById(R.id.llFooterDate);
+                checkQuranStudy = (CheckBox) itemView.findViewById(R.id.checkQuranStudy);
+                checkFamilyMeeting = (CheckBox) itemView.findViewById(R.id.checkFamilyMeeting);
+                checkVisit = (CheckBox) itemView.findViewById(R.id.checkVisit);
+                checkReportKeeping = (CheckBox) itemView.findViewById(R.id.checkReportKeeping);
+                checkSelfAssessment = (CheckBox) itemView.findViewById(R.id.checkSelfAssessment);
+                llFooterDate = (RippleView) this.itemView.findViewById(R.id.llFooterDate);
 
             }
         }
@@ -348,7 +400,7 @@ public class DailyReport extends AppCompatActivity {
 
             //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
             final com.jolpai.doctorsdiary.Realm_Model.DailyReport dailyReport = list.get(position);
-            holder.txtDate.setText(dailyReport.getToDay()+"");
+            holder.txtDate.setText(dailyReport.getToDay() + "");
             holder.txtDate.setBackground(new MyStyle().getShape());
 
 
@@ -357,104 +409,103 @@ public class DailyReport extends AppCompatActivity {
             holder.txtAcademicStudy.setText(StrParser.parseIntToString(dailyReport.getAcademicStudy()));
 
 
-            if(dailyReport.isQuranStudy()){
+            if (dailyReport.isQuranStudy()) {
                 holder.checkQuranStudy.setChecked(dailyReport.isQuranStudy());
                 holder.checkQuranStudy.setVisibility(View.VISIBLE);
-            }else{
+            } else {
                 holder.checkQuranStudy.setChecked(false);
                 holder.checkQuranStudy.setVisibility(View.GONE);
             }
 
-            if(dailyReport.getHadithStudy()==0){
+            if (dailyReport.getHadithStudy() == 0) {
                 holder.txtHadithStudy.setText("");
-            }else{
-                holder.txtHadithStudy.setText(dailyReport.getHadithStudy()+"");
+            } else {
+                holder.txtHadithStudy.setText(dailyReport.getHadithStudy() + "");
             }
 
 
-            if(dailyReport.getLiteratureStudy()==0){
+            if (dailyReport.getLiteratureStudy() == 0) {
                 holder.txtLiteratureStudy.setText("");
-            }else{
-                holder.txtLiteratureStudy.setText(dailyReport.getLiteratureStudy()+"");
+            } else {
+                holder.txtLiteratureStudy.setText(dailyReport.getLiteratureStudy() + "");
             }
 
-            if(dailyReport.getSalatwithJamaat() == 0){
+            if (dailyReport.getSalatwithJamaat() == 0) {
                 holder.txtSalatWithJamaat.setText("");
-            }else{
-                holder.txtSalatWithJamaat.setText(dailyReport.getSalatwithJamaat()+"");
+            } else {
+                holder.txtSalatWithJamaat.setText(dailyReport.getSalatwithJamaat() + "");
             }
 
-            if(dailyReport.getParticipantIntentContact()==0){
+            if (dailyReport.getParticipantIntentContact() == 0) {
                 holder.txtParticipantIntentContact.setText("");
-            }else{
-                holder.txtParticipantIntentContact.setText(dailyReport.getParticipantIntentContact()+"");
+            } else {
+                holder.txtParticipantIntentContact.setText(dailyReport.getParticipantIntentContact() + "");
             }
 
-            if(dailyReport.getVolunteerIntentContact()==0){
+            if (dailyReport.getVolunteerIntentContact() == 0) {
                 holder.txtVolunteerIntentContact.setText("");
-            }else{
-                holder.txtVolunteerIntentContact.setText(dailyReport.getVolunteerIntentContact()+"");
+            } else {
+                holder.txtVolunteerIntentContact.setText(dailyReport.getVolunteerIntentContact() + "");
             }
 
-            if(dailyReport.getMemberIntentContact()==0){
+            if (dailyReport.getMemberIntentContact() == 0) {
                 holder.txtMemberIntentContact.setText("");
-            }else{
-                holder.txtMemberIntentContact.setText(dailyReport.getMemberIntentContact()+"");
+            } else {
+                holder.txtMemberIntentContact.setText(dailyReport.getMemberIntentContact() + "");
             }
 
-            if(dailyReport.getContact()==0){
+            if (dailyReport.getContact() == 0) {
                 holder.txtContact.setText("");
-            }else{
-                holder.txtContact.setText(dailyReport.getContact()+"");
+            } else {
+                holder.txtContact.setText(dailyReport.getContact() + "");
             }
 
-            if(dailyReport.getBookDistribution()==0){
+            if (dailyReport.getBookDistribution() == 0) {
                 holder.txtBookDistribution.setText("");
-            }else{
-                holder.txtBookDistribution.setText(dailyReport.getBookDistribution()+"");
+            } else {
+                holder.txtBookDistribution.setText(dailyReport.getBookDistribution() + "");
             }
 
-            if(dailyReport.isFamilyMeeting()){
+            if (dailyReport.isFamilyMeeting()) {
                 holder.checkFamilyMeeting.setChecked(dailyReport.isFamilyMeeting());
                 holder.checkFamilyMeeting.setVisibility(View.VISIBLE);
-            }else{
+            } else {
                 holder.checkFamilyMeeting.setChecked(false);
                 holder.checkFamilyMeeting.setVisibility(View.GONE);
             }
 
-            if(dailyReport.getSocietyWork()==0.0){
+            if (dailyReport.getSocietyWork() == 0.0) {
                 holder.txtSocietyWork.setText("");
-            }else{
-                holder.txtSocietyWork.setText(dailyReport.getSocietyWork()+"");
+            } else {
+                holder.txtSocietyWork.setText(dailyReport.getSocietyWork() + "");
             }
 
-            if(dailyReport.isVisit()) {
+            if (dailyReport.isVisit()) {
                 holder.checkVisit.setChecked(dailyReport.isVisit());
-            }else{
+            } else {
                 holder.checkVisit.setChecked(false);
                 holder.checkVisit.setVisibility(View.GONE);
             }
 
-            if(dailyReport.isReportKeeping()) {
+            if (dailyReport.isReportKeeping()) {
                 holder.checkReportKeeping.setChecked(dailyReport.isReportKeeping());
                 holder.checkReportKeeping.setVisibility(View.VISIBLE);
-            }else{
+            } else {
                 holder.checkReportKeeping.setChecked(dailyReport.isReportKeeping());
                 holder.checkReportKeeping.setVisibility(View.GONE);
             }
 
-            if(dailyReport.isSelfAssessment()) {
+            if (dailyReport.isSelfAssessment()) {
                 holder.checkSelfAssessment.setChecked(dailyReport.isSelfAssessment());
                 holder.checkSelfAssessment.setVisibility(View.VISIBLE);
-            }else{
+            } else {
                 holder.checkSelfAssessment.setChecked(false);
                 holder.checkSelfAssessment.setVisibility(View.GONE);
             }
 
 
-
             // Log.e(TAG,holder.toString());
-            Log.e(TAG,"onBindViewHolder"+position);
+            Log.e(TAG, "onBindViewHolder" + position);
             Log.e(TAG, currentTime());
             // holder.description.setText(list.get(position).description);
             // holder.imageView.setImageResource(list.get(position).imageId);
@@ -465,12 +516,12 @@ public class DailyReport extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     //Toast.makeText(context,holder.txtDate.getText().toString(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(context,ReportAddEditComment.class);
-                    com.jolpai.doctorsdiary.Realm_Model.DailyReport report=(com.jolpai.doctorsdiary.Realm_Model.DailyReport)holder.llFooterDate.getTag();
+                    Intent intent = new Intent(context, ReportAddEditComment.class);
+                    com.jolpai.doctorsdiary.Realm_Model.DailyReport report = (com.jolpai.doctorsdiary.Realm_Model.DailyReport) holder.llFooterDate.getTag();
 
-                    intent.putExtra("year",report.getYear()+"");
-                    intent.putExtra("month",report.getMonth()+"");
-                    intent.putExtra("day",report.getToDay()+"");
+                    intent.putExtra("year", report.getYear() + "");
+                    intent.putExtra("month", report.getMonth() + "");
+                    intent.putExtra("day", report.getToDay() + "");
                     context.startActivity(intent);
                 }
             });

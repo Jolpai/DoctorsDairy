@@ -23,13 +23,31 @@ android {
     dexOptions {
         javaMaxHeapSize "4g"
     }
-    sourceSets {
+    /*sourceSets {
         main {
             res.srcDirs = ['src/main/res',
                            'src/main/res/values-v21']
         }
+    }*/
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res/layouts/layouts_category2',
+                    'src/main/res/layouts',
+                    'src/main/res'
+            ]
+        }
     }
+
     productFlavors {
+        /*delv{
+
+        }
+
+        prod{
+
+        }*/
     }
 }
 
@@ -57,4 +75,5 @@ dependencies {
     /* library for material design */
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 }
