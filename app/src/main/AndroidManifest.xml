@@ -23,7 +23,8 @@
             android:name=".IO.activity.DailyReport"
             android:fitsSystemWindows="true"
             android:theme="@style/HomeTheme" />
-        <activity android:name=".IO.activity.ReportAddEditComment" />
+        <activity android:name=".IO.activity.ReportAddEditComment"
+            android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".IO.activity.MonthSelection" />
         <activity android:name=".IO.activity.MonthlyPlan"></activity>
     </application>

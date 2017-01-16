@@ -209,13 +209,6 @@ public class DailyReport extends AppCompatActivity {
 
             }
         }, 300);
-
-
-
-
-
-
-
     }
 
     // check the device orientation and choose layout file.
