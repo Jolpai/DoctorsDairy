@@ -123,40 +123,40 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
         int id=v.getId();
         switch (id){
             case R.id.ripleJanuary:
-                //ToDo
+                openActivity();
                 break;
             case R.id.ripleFebruary:
-
+                openActivity();
                 break;
             case R.id.ripleMarch:
-
+                openActivity();
                 break;
             case R.id.ripleApril:
-
+                openActivity();
                 break;
             case R.id.ripleMay:
-
+                openActivity();
                 break;
             case R.id.ripleJune:
-
+                openActivity();
                 break;
             case R.id.ripleJuly:
-
+                openActivity();
                 break;
             case R.id.ripleAugust:
-
+                openActivity();
                 break;
             case R.id.ripleSeptember:
-
+                openActivity();
                 break;
             case R.id.ripleOctober:
                 openActivity();
                 break;
             case R.id.ripleNovember:
-
+                openActivity();
                 break;
             case R.id.ripleDecember:
-
+                openActivity();
                 break;
             default:
                 break;
