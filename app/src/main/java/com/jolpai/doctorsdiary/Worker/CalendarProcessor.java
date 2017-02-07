@@ -4,7 +4,6 @@ import android.app.FragmentManager;
 import android.content.Context;
 import android.view.View;
 
-import com.jolpai.doctorsdiary.IO.activity.MonthlyPlan;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;

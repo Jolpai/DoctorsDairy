@@ -6,11 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.Brain.App;
 import com.jolpai.doctorsdiary.R;
 
-import static com.jolpai.doctorsdiary.App.TAG;
-import static com.jolpai.doctorsdiary.App.currentTime;
+import static com.jolpai.doctorsdiary.Brain.App.TAG;
+import static com.jolpai.doctorsdiary.Brain.App.currentTime;
 
 public class Splash extends AppCompatActivity {
 

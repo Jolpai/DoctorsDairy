@@ -17,28 +17,25 @@ import android.widget.Toast;
 
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.Worker.MyDateFormat;
-import com.jolpai.doctorsdiary.Worker.DoubleParser;
-import com.jolpai.doctorsdiary.Worker.GetData;
-import com.jolpai.doctorsdiary.Worker.IntParser;
+import com.jolpai.doctorsdiary.Worker.Parse.DoubleParser;
+import com.jolpai.doctorsdiary.Worker.Database.GetData;
+import com.jolpai.doctorsdiary.Worker.Parse.IntParser;
 import com.jolpai.doctorsdiary.Realm_Model.DailyReport;
-import com.jolpai.doctorsdiary.Worker.SaveData;
-import com.jolpai.doctorsdiary.Worker.StrParser;
+import com.jolpai.doctorsdiary.Worker.Database.SaveData;
+import com.jolpai.doctorsdiary.Worker.Parse.StrParser;
 
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 import io.realm.RealmResults;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ReportAddEdit.OnFragmentInteractionListener} interface
+ * {@link AddEdit_Report.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ReportAddEdit#newInstance} factory method to
+ * Use the {@link AddEdit_Report#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ReportAddEdit extends Fragment  {
+public class AddEdit_Report extends Fragment  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String YEAR = "YEAR";
@@ -75,7 +72,7 @@ public class ReportAddEdit extends Fragment  {
 
     private OnFragmentInteractionListener mListener;
 
-    public ReportAddEdit() {
+    public AddEdit_Report() {
         // Required empty public constructor
     }
 
@@ -86,11 +83,11 @@ public class ReportAddEdit extends Fragment  {
      * @param year year.
      * @param month selected month of this year.
      * @param day selected day of this month.
-     * @return A new instance of fragment ReportAddEdit.
+     * @return A new instance of fragment AddEdit_Report.
      */
     // TODO: Rename and change types and number of parameters
-    public static ReportAddEdit newInstance(String year, String month,String day) {
-        ReportAddEdit fragment = new ReportAddEdit();
+    public static AddEdit_Report newInstance(String year, String month, String day) {
+        AddEdit_Report fragment = new AddEdit_Report();
         Bundle bundle = new Bundle();
         bundle.putString(YEAR, year);
         bundle.putString(MONTH, month);

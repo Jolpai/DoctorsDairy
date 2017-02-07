@@ -22,14 +22,14 @@ import android.widget.TextView;
 import android.widget.LinearLayout;
 
 import com.andexert.library.RippleView;
-import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.Brain.App;
 import com.jolpai.doctorsdiary.IO.custom_view.VerticalTextView;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.IO.custom_view.MyStyle;
-import com.jolpai.doctorsdiary.Worker.GetData;
+import com.jolpai.doctorsdiary.Worker.Database.GetData;
 import com.jolpai.doctorsdiary.Worker.MyDateFormat;
-import com.jolpai.doctorsdiary.Worker.SaveData;
-import com.jolpai.doctorsdiary.Worker.StrParser;
+import com.jolpai.doctorsdiary.Worker.Database.SaveData;
+import com.jolpai.doctorsdiary.Worker.Parse.StrParser;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,8 +37,8 @@ import java.util.List;
 
 import io.realm.RealmResults;
 
-import static com.jolpai.doctorsdiary.App.TAG;
-import static com.jolpai.doctorsdiary.App.currentTime;
+import static com.jolpai.doctorsdiary.Brain.App.TAG;
+import static com.jolpai.doctorsdiary.Brain.App.currentTime;
 
 public class DailyReport extends AppCompatActivity {
     private static final String YEAR="YEAR";
@@ -217,12 +217,12 @@ public class DailyReport extends AppCompatActivity {
         int orientation= DailyReport.this.getResources().getConfiguration().orientation;
         if(orientation == Configuration.ORIENTATION_PORTRAIT) {
             setContentView(R.layout.activity_report_portrait);
-            rowRecyclerView=R.layout.row_portrait;
+            rowRecyclerView=R.layout.row_report_portrait;
             horizontalLayoutManager = new LinearLayoutManager(DailyReport.this,LinearLayoutManager.VERTICAL,false);
 
         }/*else if(orientation == Configuration.ORIENTATION_LANDSCAPE){
             setContentView(R.layout.activity_report_landscape);
-            rowRecyclerView=R.layout.row_landscape;
+            rowRecyclerView=R.layout.row_report_landscape;
            horizontalLayoutManager = new LinearLayoutManager(DailyReport.this,LinearLayoutManager.HORIZONTAL,false);
         }*/
     }
@@ -458,7 +458,7 @@ public class DailyReport extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     //Toast.makeText(context,holder.txtDate.getText().toString(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(context,ReportAddEditComment.class);
+                    Intent intent = new Intent(context,AddEdit_Report_Comment.class);
                     com.jolpai.doctorsdiary.Realm_Model.DailyReport report=(com.jolpai.doctorsdiary.Realm_Model.DailyReport)holder.llFooterDate.getTag();
 
                     intent.putExtra("year",report.getYear()+"");

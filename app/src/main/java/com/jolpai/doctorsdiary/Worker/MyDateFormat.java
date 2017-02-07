@@ -2,9 +2,8 @@ package com.jolpai.doctorsdiary.Worker;
 
 import android.util.Log;
 
-import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.Brain.App;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -72,6 +71,13 @@ public class MyDateFormat {
         day = c.get(Calendar.DAY_OF_MONTH);
        // int numDays = c.getActualMaximum(Calendar.DATE);
         return day;
+    }
+
+    public static String getDateTimeNow(){
+
+        Calendar c = Calendar.getInstance();
+        return Long.toString(c.getTimeInMillis());
+
     }
 
     public static int getNumOfDayOfMonth(int year, int month){

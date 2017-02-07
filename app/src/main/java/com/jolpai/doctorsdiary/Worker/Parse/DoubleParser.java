@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdiary.Worker;
+package com.jolpai.doctorsdiary.Worker.Parse;
 
 import android.util.Log;
 

@@ -12,18 +12,18 @@ import android.view.ViewGroup;
 
 import com.jolpai.doctorsdiary.Worker.BlinkAnimator;
 import com.jolpai.doctorsdiary.R;
-import com.jolpai.doctorsdiary.IO.activity.MonthlyPlan;
+import com.jolpai.doctorsdiary.IO.activity.AddEdit_Plan;
 import com.jolpai.doctorsdiary.Worker.MyDateFormat;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link MonthForPlan.OnFragmentInteractionListener} interface
+ * {@link MonthSelect_Plan.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link MonthForPlan#newInstance} factory method to
+ * Use the {@link MonthSelect_Plan#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MonthForPlan extends Fragment implements View.OnClickListener{
+public class MonthSelect_Plan extends Fragment implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,7 +38,7 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
 
     private OnFragmentInteractionListener mListener;
 
-    public MonthForPlan() {
+    public MonthSelect_Plan() {
         // Required empty public constructor
     }
 
@@ -48,11 +48,11 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MonthForPlan.
+     * @return A new instance of fragment MonthSelect_Plan.
      */
     // TODO: Rename and change types and number of parameters
-    public static MonthForPlan newInstance(String param1, String param2) {
-        MonthForPlan fragment = new MonthForPlan();
+    public static MonthSelect_Plan newInstance(String param1, String param2) {
+        MonthSelect_Plan fragment = new MonthSelect_Plan();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -76,7 +76,7 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
 
         View v =null;
 
-        int orientation= MonthForPlan.this.getResources().getConfiguration().orientation;
+        int orientation= MonthSelect_Plan.this.getResources().getConfiguration().orientation;
         if(orientation == Configuration.ORIENTATION_PORTRAIT) {
             v= inflater.inflate(R.layout.fragment_month_for_plan_portrait, container, false);
 
@@ -165,7 +165,7 @@ public class MonthForPlan extends Fragment implements View.OnClickListener{
     }
 
     private void openActivity(){
-        Intent inent = new Intent(getContext(),MonthlyPlan.class);
+        Intent inent = new Intent(getContext(),AddEdit_Plan.class);
         getContext().startActivity(inent);
     }
 

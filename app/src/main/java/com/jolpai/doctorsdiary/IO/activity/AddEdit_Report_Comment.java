@@ -10,13 +10,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.jolpai.doctorsdiary.IO.fragment.AddEditShow_Comment;
 import com.jolpai.doctorsdiary.R;
-import com.jolpai.doctorsdiary.IO.fragment.ReportAddEdit;
-import com.jolpai.doctorsdiary.IO.fragment.CommentOnReport;
-import com.jolpai.doctorsdiary.Worker.IntParser;
-import com.jolpai.doctorsdiary.Worker.StrParser;
+import com.jolpai.doctorsdiary.IO.fragment.AddEdit_Report;
+import com.jolpai.doctorsdiary.Worker.Parse.IntParser;
+import com.jolpai.doctorsdiary.Worker.Parse.StrParser;
 
-public class ReportAddEditComment extends AppCompatActivity {
+public class AddEdit_Report_Comment extends AppCompatActivity {
     FragmentPagerAdapter pagerAdapter;
     private PagerSlidingTabStrip tab;
     private ViewPager pager;
@@ -30,9 +30,9 @@ public class ReportAddEditComment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report_add_edit_comment);
 
-        white=ReportAddEditComment.this.getResources().getColor(R.color.white);
-        amber_500=ReportAddEditComment.this.getResources().getColor(R.color.amber_500);
-        green_500=ReportAddEditComment.this.getResources().getColor(R.color.green_500);
+        white=AddEdit_Report_Comment.this.getResources().getColor(R.color.white);
+        amber_500=AddEdit_Report_Comment.this.getResources().getColor(R.color.amber_500);
+        green_500=AddEdit_Report_Comment.this.getResources().getColor(R.color.green_500);
 
         toolbarColor=green_500;
         toolbarTextColor=white;
@@ -81,11 +81,11 @@ public class ReportAddEditComment extends AppCompatActivity {
 
             switch (position){
                 case 0:
-                    return ReportAddEdit.newInstance(StrParser.parseIntToString(year),
+                    return AddEdit_Report.newInstance(StrParser.parseIntToString(year),
                             StrParser.parseIntToString(month),
                             StrParser.parseIntToString(day));
                 case 1:
-                    return CommentOnReport.newInstance(StrParser.parseIntToString(year),
+                    return AddEditShow_Comment.newInstance(StrParser.parseIntToString(year),
                             StrParser.parseIntToString(month),
                             StrParser.parseIntToString(day));
                 default:

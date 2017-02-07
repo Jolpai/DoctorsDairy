@@ -11,10 +11,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import com.astuetz.PagerSlidingTabStrip;
-import com.jolpai.doctorsdiary.App;
+import com.jolpai.doctorsdiary.Brain.App;
+import com.jolpai.doctorsdiary.IO.fragment.MonthSelect_Report;
 import com.jolpai.doctorsdiary.R;
-import com.jolpai.doctorsdiary.IO.fragment.MonthForPlan;
-import com.jolpai.doctorsdiary.IO.fragment.MonthForReport;
+import com.jolpai.doctorsdiary.IO.fragment.MonthSelect_Plan;
 import com.jolpai.doctorsdiary.Realm_Model.PlanForMonth;
 
 import io.realm.Realm;
@@ -125,9 +125,9 @@ public class MonthSelection extends AppCompatActivity {
 
             switch (position){
                 case 0:
-                    return MonthForReport.newInstance("","");
+                    return MonthSelect_Report.newInstance("","");
                 case 1:
-                    return MonthForPlan.newInstance("","");
+                    return MonthSelect_Plan.newInstance("","");
                 default:
                     return null;
             }

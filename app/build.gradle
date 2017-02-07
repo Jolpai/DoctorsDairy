@@ -65,8 +65,11 @@ dependencies {
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
 
 
-    /* Testing Unit test, expresso test */
+    /* Testing */
+    /* Unit test */
     testCompile 'junit:junit:4.12'
+
+    /* Expresso test */
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     
 }

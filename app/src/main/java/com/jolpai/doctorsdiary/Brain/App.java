@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdiary;
+package com.jolpai.doctorsdiary.Brain;
 
 import android.app.Application;
 import android.content.Context;
@@ -25,6 +25,8 @@ public class App extends Application {
     public static String ACTION_MSG="ACTION_MSG";
     public static String EXCEPTION="EXCEPTION";
 
+    public static Context context;
+
 
     @Override
     public void onCreate() {
@@ -33,6 +35,7 @@ public class App extends Application {
         Log.e(TAG,"App");
         Log.e(TAG, currentTime());
         Stetho.initializeWithDefaults(this);
+        context=this;
 
 
     }

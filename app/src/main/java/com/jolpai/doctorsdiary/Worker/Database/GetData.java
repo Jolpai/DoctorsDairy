@@ -1,9 +1,8 @@
-package com.jolpai.doctorsdiary.Worker;
+package com.jolpai.doctorsdiary.Worker.Database;
 
 import android.content.Context;
-import android.util.Log;
 
-import com.jolpai.doctorsdiary.Realm_Model.DailyReport;
+import com.jolpai.doctorsdiary.Worker.Parse.StrParser;
 
 import io.realm.Realm;
 import io.realm.RealmObject;
@@ -22,6 +21,17 @@ public class GetData {
         RealmQuery<RealmObject> query = realm.where(clazz);
         query.equalTo("year",year);
         query.equalTo("month",month);
+        RealmResults<RealmObject> result = query.findAll();
+        return result;
+    }
+
+    public static RealmResults getOneMonthCommentFromRealm(Context context, final Class<RealmObject> clazz, int year,int month,int day){
+        Realm.init(context);
+        Realm realm =Realm.getDefaultInstance();
+        RealmQuery<RealmObject> query = realm.where(clazz);
+        query.equalTo("year",year);
+        query.equalTo("month",month);
+        query.equalTo("day",day);
         RealmResults<RealmObject> result = query.findAll();
         return result;
     }

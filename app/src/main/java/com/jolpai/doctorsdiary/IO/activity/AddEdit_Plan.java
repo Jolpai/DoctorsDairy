@@ -7,13 +7,11 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.Realm_Model.PlanForMonth;
-import com.jolpai.doctorsdiary.Worker.CalendarProcessor;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
@@ -23,7 +21,7 @@ import java.util.Calendar;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
-public class MonthlyPlan extends AppCompatActivity implements View.OnClickListener,
+public class AddEdit_Plan extends AppCompatActivity implements View.OnClickListener,
         TimePickerDialog.OnTimeSetListener,
         DatePickerDialog.OnDateSetListener{
 
@@ -52,7 +50,7 @@ public class MonthlyPlan extends AppCompatActivity implements View.OnClickListen
             items[2] = "Member";
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(MonthlyPlan.this, R.layout.x_row_span, items);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(AddEdit_Plan.this, R.layout.x_row_span, items);
         adapter.setDropDownViewResource(R.layout.x_row_spn_dropdown);
         spn_label.setAdapter(adapter);
 
@@ -61,7 +59,7 @@ public class MonthlyPlan extends AppCompatActivity implements View.OnClickListen
             public void onClick(View v) {
                 Calendar now = Calendar.getInstance();
                 DatePickerDialog dpd = DatePickerDialog.newInstance(
-                        MonthlyPlan.this,
+                        AddEdit_Plan.this,
                         now.get(Calendar.YEAR),
                         now.get(Calendar.MONTH),
                         now.get(Calendar.DAY_OF_MONTH)
