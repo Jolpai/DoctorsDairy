@@ -4,20 +4,19 @@ We are trying to use Realm Db , Epresso test, JUnit test and trying to follow so
 
 ## Realm Database
 - Configuration and Setup
-- Curde
+- CRUD
 - Migration
 - Export
 
 ## Architecture Design
-- SOLID
-- Custome
+- Clean
+- Custome (Thinking Something New)
 
 ## Unit Test
 - JUnit
 - Espresso
 
+#### Realm Database
 
-
-## Real Database
 
 
