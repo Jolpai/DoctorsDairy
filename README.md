@@ -9,8 +9,6 @@ We are trying to use Realm Db , Epresso test, JUnit test and trying to follow so
 - Export
 
 ## Architecture Design
-- Clean
-- MVP
 - Custome (Thinking Something New)
 
 ## Unit Test
