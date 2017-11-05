@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/ripleJanuary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_blue_500_400"
+            android:text="January"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/ripleFebruary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_blue_500_400"
+            android:text="February"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/ripleMarch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_blue_500_400"
+            android:text="March"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/ripleApril"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_blue_500_400"
+            android:text="April"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/ripleMay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_blue_500_400"
+            android:text="May"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/ripleJune"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_blue_500_400"
+            android:text="June"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ripleJuly"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_green_500_400"
+            android:text="July"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/ripleAugust"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_green_500_400"
+            android:text="August"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/ripleSeptember"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_green_500_400"
+            android:text="September"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ripleOctober"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_green_500_400"
+            android:text="October"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/ripleNovember"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_green_500_400"
+            android:text="November"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/ripleDecember"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/RippleMonthSelectionColor_green_500_400"
+            android:text="December"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

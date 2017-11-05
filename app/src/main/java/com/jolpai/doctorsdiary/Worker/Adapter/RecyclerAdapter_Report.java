@@ -11,16 +11,16 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.andexert.library.RippleView;
-import com.jolpai.doctorsdiary.IO.activity.AddEdit_Report_Comment;
-import com.jolpai.doctorsdiary.Realm_Model.DailyReport;
-import com.jolpai.doctorsdiary.IO.custom_view.MyStyle;
+import com.jolpai.doctorsdiary.View.Comment.AddEdit_Report_Comment;
+import com.jolpai.doctorsdiary.Worker.Database.POJO.DailyReport;
+import com.jolpai.doctorsdiary.CustomWidget.MyStyle;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.Worker.Parse.StrParser;
 
 import java.util.List;
 
-import static com.jolpai.doctorsdiary.Brain.App.TAG;
-import static com.jolpai.doctorsdiary.Brain.App.currentTime;
+import static com.jolpai.doctorsdiary.App.TAG;
+import static com.jolpai.doctorsdiary.App.currentTime;
 
 /**
  * Created by User on 1/25/2017.
@@ -221,7 +221,7 @@ public class RecyclerAdapter_Report   extends RecyclerView.Adapter<RecyclerAdapt
                 public void onClick(View v) {
                     //Toast.makeText(context,holder.txtDate.getText().toString(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context,AddEdit_Report_Comment.class);
-                    com.jolpai.doctorsdiary.Realm_Model.DailyReport report=(com.jolpai.doctorsdiary.Realm_Model.DailyReport)holder.llFooterDate.getTag();
+                    com.jolpai.doctorsdiary.Worker.Database.POJO.DailyReport report=(com.jolpai.doctorsdiary.Worker.Database.POJO.DailyReport)holder.llFooterDate.getTag();
 
                     intent.putExtra("year",report.getYear()+"");
                     intent.putExtra("month",report.getMonth()+"");

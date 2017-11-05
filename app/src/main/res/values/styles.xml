@@ -127,9 +127,9 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
         <item name="android:background">@color/green_hangout</item>
-        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginLeft">.5dp</item>
         <item name="android:layout_marginTop">0dp</item>
-        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
         <item name="android:layout_gravity">center</item>
     </style>
 
@@ -138,7 +138,7 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
         <item name="android:background">@color/green_hangout</item>
-        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginLeft">.5dp</item>
         <item name="android:layout_marginTop">1dp</item>
         <item name="android:layout_marginBottom">1dp</item>
         <item name="android:layout_gravity">center</item>
@@ -160,9 +160,24 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">45dp</item>
         <item name="android:background">@color/white</item>
-        <item name="android:layout_marginLeft">1dp</item>
-        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginTop">.5dp</item>
         <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:gravity">center|right</item>
+    </style>
+
+    <style name="RelativePortraitReportRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:minWidth">45dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginLeft">.5dp</item>
+        <item name="android:layout_marginTop">.5dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black_500</item>
         <item name="android:gravity">center|right</item>
     </style>
 
@@ -175,7 +190,7 @@
 
     <style name="TextViewPortraitReportFooter" parent="android:Widget.TextView">
         <item name="android:padding">5dp</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/gray_200</item>
         <item name="android:gravity">right</item>
         <item name="android:minWidth">45dp</item>

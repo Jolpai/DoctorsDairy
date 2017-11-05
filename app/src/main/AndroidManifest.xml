@@ -4,29 +4,35 @@
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
-        android:name="com.jolpai.doctorsdiary.Brain.App"
+        android:name="com.jolpai.doctorsdiary.App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/m"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
-        <activity android:name=".IO.activity.Splash">
+
+        <activity android:name=".View.SplashScreen.Splash_V">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".IO.activity.DailyReport"
+            android:name=".View.Report.DailyReport"
             android:fitsSystemWindows="true"
             android:theme="@style/HomeTheme" />
-        <activity android:name=".IO.activity.AddEdit_Report_Comment"
+
+        <activity android:name=".View.Comment.AddEdit_Report_Comment"
             android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".IO.activity.MonthSelection" />
-        <activity android:name=".IO.activity.AddEdit_Plan"></activity>
+
+        <activity android:name=".View.MonthSelection.MonthSelection_V" />
+
+        <activity android:name=".View.Plan.AddEdit_Plan"></activity>
     </application>
 
 </manifest>

@@ -10,12 +10,13 @@ import android.widget.TextView;
 
 import com.andexert.library.RippleView;
 import com.jolpai.doctorsdiary.R;
-import com.jolpai.doctorsdiary.Realm_Model.Comments;
+import com.jolpai.doctorsdiary.Worker.Database.POJO.Comments;
+import com.jolpai.doctorsdiary.Worker.Others.MyDateFormat;
 
 import java.util.List;
 
-import static com.jolpai.doctorsdiary.Brain.App.TAG;
-import static com.jolpai.doctorsdiary.Brain.App.currentTime;
+import static com.jolpai.doctorsdiary.App.TAG;
+import static com.jolpai.doctorsdiary.App.currentTime;
 
 /**
  * Created by User on 1/22/2017.
@@ -23,10 +24,10 @@ import static com.jolpai.doctorsdiary.Brain.App.currentTime;
 
 public class RecyclerAdapter_Comment extends RecyclerView.Adapter<RecyclerAdapter_Comment.View_Holder> {
 
-        private List<com.jolpai.doctorsdiary.Realm_Model.Comments> list;
+        private List<com.jolpai.doctorsdiary.Worker.Database.POJO.Comments> list;
         private Context context;
 
-        public RecyclerAdapter_Comment(List<com.jolpai.doctorsdiary.Realm_Model.Comments> list, Context context) {
+        public RecyclerAdapter_Comment(List<com.jolpai.doctorsdiary.Worker.Database.POJO.Comments> list, Context context) {
             this.list = list;
             this.context = context;
         }
@@ -62,7 +63,8 @@ public class RecyclerAdapter_Comment extends RecyclerView.Adapter<RecyclerAdapte
         public void onBindViewHolder(final View_Holder holder, int position) {
             //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
             final Comments comments = list.get(position);
-            holder.textCommentDate.setText(comments.getDate());
+
+            holder.textCommentDate.setText(MyDateFormat.getDDMMYYTT(comments.getDate()));
             holder.textComment.setText(comments.getComment());
             holder.textCommentersName.setText(comments.getPersonsName());
             holder.view.setTag(comments);

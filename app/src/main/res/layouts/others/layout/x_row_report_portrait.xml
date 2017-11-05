@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/green_500">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <com.andexert.library.RippleView
+            android:id="@+id/llFooterDate"
+            style="@style/RippleReportDateRowColor_green_500_400">
+
+            <TextView
+                android:id="@+id/txtDate"
+                style="@style/landScapeRowTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green_700"
+                android:text="Date"/>
+
+        </com.andexert.library.RippleView>
+
+            <TextView
+                android:id="@+id/txtProfessionalWork"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtAcademicStudy"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <CheckBox
+                android:id="@+id/checkQuranStudy"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/txtHadithStudy"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtLiteratureStudy"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtSalatWithJamaat"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtParticipantIntentContact"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtVolunteerIntentContact"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtMemberIntentContact"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtContact"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtBookDistribution"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <CheckBox
+                android:id="@+id/checkFamilyMeeting"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/txtSocietyWork"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <CheckBox
+                android:id="@+id/checkVisit"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"/>
+
+
+            <CheckBox
+                android:id="@+id/checkReportKeeping"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"/>
+
+
+            <CheckBox
+                android:id="@+id/checkSelfAssessment"
+                style="@style/RelativePortraitReportRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

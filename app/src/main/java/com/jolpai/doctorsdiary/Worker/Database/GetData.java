@@ -36,6 +36,16 @@ public class GetData {
         return result;
     }
 
+    public static RealmResults getOneMonthPlanListFromRealm(Context context, final Class<RealmObject> clazz, int year,int month){
+        Realm.init(context);
+        Realm realm =Realm.getDefaultInstance();
+        RealmQuery<RealmObject> query = realm.where(clazz);
+        query.equalTo("year",year);
+        query.equalTo("month",month);
+        RealmResults<RealmObject> result = query.findAll();
+        return result;
+    }
+
     public static RealmResults getOneDayReportFromRealm(Context context, final Class<RealmObject> clazz,String date){
         Realm.init(context);
         Realm realm =Realm.getDefaultInstance();

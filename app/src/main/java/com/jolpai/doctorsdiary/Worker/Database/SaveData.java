@@ -3,7 +3,7 @@ package com.jolpai.doctorsdiary.Worker.Database;
 import android.content.Context;
 import android.util.Log;
 
-import com.jolpai.doctorsdiary.Brain.App;
+import com.jolpai.doctorsdiary.App;
 
 import io.realm.Realm;
 import io.realm.RealmObject;

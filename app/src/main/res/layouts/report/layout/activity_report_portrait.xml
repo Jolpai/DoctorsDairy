@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llR"
+    tools:context=".View.Report.DailyReport">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            android:id="@+id/txtHeaderMonthYear"
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Date"
+                            android:minHeight="45dp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Professional Workd (hour)"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Academic study (hour)"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="45dp"
+                            android:gravity="bottom|center_vertical"
+                            android:text="Quran Study"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Hadith Study (number)"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Literature Study (page)"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Salat with Jama'at"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Participant Intent contact"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Volunteer Intent contact"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Member Intent contact"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Contact"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|left"
+                            android:text="Book Distribution"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Family meeting "/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Society Work (hh:mm)"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Visit"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Report Keeping"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                            style="@style/TextViewPortraitReportHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="Self-assessment"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/horizontalRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgTotalDay"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=""/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgProfessionalWork"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=""/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgAcademicStudy"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgQuranStudy"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgHadithStudy"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgLiteratureStudy"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgSalatWithJamaat"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgParticipantIntentContact"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgVolunteerIntentContact"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgMemberIntentContact"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgContact"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgBookDistribution"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgFamilyMeeting"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgSocietyWork"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgVisit"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgReportKeeping"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearPortraitReportHeaderColor_green_hangout">
+
+                        <TextView
+                            android:id="@+id/avrgSelfAssessment"
+                            style="@style/TextViewPortraitReportFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text=""/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>
