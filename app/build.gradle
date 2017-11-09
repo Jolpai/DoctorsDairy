@@ -26,11 +26,7 @@ android {
     }
     sourceSets {
         main {
-            res.srcDirs = ['src/main/res/layouts/splash',
-                           'src/main/res/layouts',
-                           'src/main/res',
-
-                           'src/main/res/layouts/settings',
+            res.srcDirs = ['src/main/res/layouts/settings',
 
                            'src/main/res/layouts/report',
 
@@ -41,6 +37,10 @@ android {
                            'src/main/res/layouts/others',
 
                            'src/main/res/layouts/test',
+
+                           'src/main/res/layouts/splash',
+                           'src/main/res/layouts',
+                           'src/main/res',
                             ]
 
         }
