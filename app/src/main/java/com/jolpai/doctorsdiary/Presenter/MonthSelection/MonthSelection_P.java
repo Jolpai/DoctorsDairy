@@ -4,9 +4,12 @@ import com.jolpai.doctorsdiary.Contractor.MonthSelection.MonthSelection_C;
 
 import javax.inject.Inject;
 
+import dagger.Module;
+
 /**
  * Created by User on 10/30/2017.
  */
+
 
 public class MonthSelection_P implements MonthSelection_C.Presenter {
 

@@ -7,6 +7,7 @@ package com.jolpai.doctorsdiary.Contractor.SplashScreen;
 public interface Splash_C {
 
     interface View{
+        void init();
         void displayApplicationMessage(String message);
         void navigateToHomePage(int time);
     }

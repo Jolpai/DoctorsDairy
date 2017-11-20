@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jolpai.doctorsdiary.View.Plan.AddEdit_Plan;
-import com.jolpai.doctorsdiary.Worker.Others.BlinkAnimator;
+import com.jolpai.doctorsdiary.Worker.Animation.BlinkAnimator;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.Worker.Others.MyDateFormat;
 

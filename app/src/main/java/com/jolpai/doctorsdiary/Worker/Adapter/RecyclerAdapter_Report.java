@@ -19,8 +19,6 @@ import com.jolpai.doctorsdiary.Worker.Parse.StrParser;
 
 import java.util.List;
 
-import static com.jolpai.doctorsdiary.App.TAG;
-import static com.jolpai.doctorsdiary.App.currentTime;
 
 /**
  * Created by User on 1/25/2017.
@@ -208,9 +206,7 @@ public class RecyclerAdapter_Report   extends RecyclerView.Adapter<RecyclerAdapt
 
 
 
-            // Log.e(TAG,holder.toString());
-            Log.e(TAG,"onBindViewHolder"+position);
-            Log.e(TAG, currentTime());
+
             // holder.description.setText(list.get(position).description);
             // holder.imageView.setImageResource(list.get(position).imageId);
 

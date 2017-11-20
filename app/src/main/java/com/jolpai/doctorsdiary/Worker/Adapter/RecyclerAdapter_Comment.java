@@ -15,8 +15,7 @@ import com.jolpai.doctorsdiary.Worker.Others.MyDateFormat;
 
 import java.util.List;
 
-import static com.jolpai.doctorsdiary.App.TAG;
-import static com.jolpai.doctorsdiary.App.currentTime;
+
 
 /**
  * Created by User on 1/22/2017.
@@ -69,9 +68,6 @@ public class RecyclerAdapter_Comment extends RecyclerView.Adapter<RecyclerAdapte
             holder.textCommentersName.setText(comments.getPersonsName());
             holder.view.setTag(comments);
 
-            // Log.e(TAG,holder.toString());
-            Log.e(TAG,"onBindViewHolder"+position);
-            Log.e(TAG, currentTime());
 
         }
 

@@ -15,8 +15,6 @@ import com.jolpai.doctorsdiary.Worker.Others.MyDateFormat;
 
 import java.util.List;
 
-import static com.jolpai.doctorsdiary.App.TAG;
-import static com.jolpai.doctorsdiary.App.currentTime;
 
 /**
  * Created by User on 1/25/2017.
@@ -74,9 +72,6 @@ public class RecyclerAdapter_Plan extends RecyclerView.Adapter<RecyclerAdapter_P
         holder.textType.setText(planForMonth.getType());
         holder.view.setTag(planForMonth);
 
-        // Log.e(TAG,holder.toString());
-        Log.e(TAG,"onBindViewHolder"+position);
-        Log.e(TAG, currentTime());
 
     }
 

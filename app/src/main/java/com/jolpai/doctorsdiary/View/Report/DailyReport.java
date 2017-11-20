@@ -44,8 +44,6 @@ import java.util.List;
 
 import io.realm.RealmResults;
 
-import static com.jolpai.doctorsdiary.App.TAG;
-import static com.jolpai.doctorsdiary.App.currentTime;
 
 public class DailyReport extends AppCompatActivity {
     private static final String YEAR="YEAR";
@@ -84,7 +82,7 @@ public class DailyReport extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e(App.TAG,"DailyReport");
+       // Log.e(App.TAG,"DailyReport");
 
         hideStatusBar();
         checkOrientation();
@@ -102,7 +100,6 @@ public class DailyReport extends AppCompatActivity {
 
 
     private void initialize() {
-        Log.e(App.TAG, App.currentTime());
 
         llR=(LinearLayout)findViewById(R.id.llR);
 
@@ -181,7 +178,7 @@ public class DailyReport extends AppCompatActivity {
 
         Collections.sort(horizontalList);
 
-        Log.e(App.TAG, App.currentTime());
+
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -190,7 +187,7 @@ public class DailyReport extends AppCompatActivity {
                 horizontalRecycler.setLayoutManager(horizontalLayoutManager);
                 horizontalRecycler.setAdapter( new Recycler_View_Adapter(horizontalList,DailyReport.this));
 
-                Log.e(App.TAG,"call adapter"+ App.currentTime());
+
 
 
                 avrgTotalDay.setText(StrParser.parseIntToString(avgReportList.size()));
@@ -504,10 +501,6 @@ public class DailyReport extends AppCompatActivity {
             }
 
 
-
-            // Log.e(TAG,holder.toString());
-            Log.e(TAG,"onBindViewHolder"+position);
-            Log.e(TAG, currentTime());
             // holder.description.setText(list.get(position).description);
             // holder.imageView.setImageResource(list.get(position).imageId);
 

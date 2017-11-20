@@ -1,4 +1,4 @@
-package com.jolpai.doctorsdiary.Worker.Others;
+package com.jolpai.doctorsdiary.Worker.Animation;
 
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;

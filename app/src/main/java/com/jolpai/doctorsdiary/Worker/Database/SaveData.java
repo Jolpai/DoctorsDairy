@@ -30,14 +30,14 @@ public class SaveData {
                 @Override
                 public void onSuccess() {
                     // Transaction was a success.
-                    Log.e(App.ACTION_MSG, "Data Save Successfully");
+                   // Log.e(App.ACTION_MSG, "Data Save Successfully");
                     //returnType =true;
                 }
             }, new Realm.Transaction.OnError() {
                 @Override
                 public void onError(Throwable error) {
                     // Transaction failed and was automatically canceled.
-                    Log.e(App.ACTION_MSG, "Data Save Failed !!: "+error.getMessage());
+                  //  Log.e(App.ACTION_MSG, "Data Save Failed !!: "+error.getMessage());
                 }
             });
 

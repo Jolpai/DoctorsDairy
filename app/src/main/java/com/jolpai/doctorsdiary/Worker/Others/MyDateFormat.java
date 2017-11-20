@@ -32,7 +32,7 @@ public class MyDateFormat {
           date= df.format(df.parse(day + "/" + month + "/" + year));
             //date= df.format(df.parse("4/11/2016"));
         }catch (Exception ex){
-            Log.e(App.EXCEPTION,ex.getMessage());
+           // Log.e(App.EXCEPTION,ex.getMessage());
         }
         return date;
     }
