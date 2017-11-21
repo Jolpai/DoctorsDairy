@@ -2,20 +2,22 @@ package com.jolpai.doctorsdiary.View.SplashScreen;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.jolpai.doctorsdiary.Contractor.SplashScreen.Splash_C;
-import com.jolpai.doctorsdiary.Dagger.AppComponent;
 import com.jolpai.doctorsdiary.Presenter.SplashScreen.Splash_P;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.View.MonthSelection.MonthSelection_V;
+
+import dagger.Binds;
 
 public class Splash_V extends AppCompatActivity implements Splash_C.View{
 
     private Splash_C.Presenter prsenter;
     private Context mContext;
+    @Binds
 
 
     @Override
