@@ -11,13 +11,11 @@ import com.jolpai.doctorsdiary.Presenter.SplashScreen.Splash_P;
 import com.jolpai.doctorsdiary.R;
 import com.jolpai.doctorsdiary.View.MonthSelection.MonthSelection_V;
 
-import dagger.Binds;
-
 public class Splash_V extends AppCompatActivity implements Splash_C.View{
 
     private Splash_C.Presenter prsenter;
     private Context mContext;
-    @Binds
+    //@Binds
 
 
     @Override
