@@ -5,8 +5,15 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="Add   "
-        app:showAsAction="always" />
+        android:title="Settings   "
+        app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_logout"
+        android:title="Logout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_reset"
+        android:title="Reset"
+        app:showAsAction="never" />
 </menu>

@@ -16,7 +16,7 @@
     <color name="green_700">#388E3C</color>
     <color name="green_hangout">#0f9d58</color>
 
-    <color name="green_hangout_trans_50">#500f9d58</color>
+    <color name="green_hangout_trans_50">#900f9d58</color>
 
     <color name="yellow_500">#FFEB3B</color>
 
@@ -35,6 +35,8 @@
     <color name="blue_200">#90CAF9</color>
     <color name="blue_300">#64B5F6</color>
     <color name="blue_50">#E3F2FD</color>
+
+    <color name="blue_500_trans_80">#902196F3</color>
 
     <color name="black_500">#000000</color>
 

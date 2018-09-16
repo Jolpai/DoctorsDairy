@@ -5,4 +5,5 @@ package com.jolpai.doctorsdiary.Contractor;
  */
 
 public interface BaseContractor {
+    void initView();
 }

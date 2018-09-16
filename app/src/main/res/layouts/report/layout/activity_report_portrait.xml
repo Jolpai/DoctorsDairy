@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/llR"
-    tools:context=".View.Report.DailyReport">
+    tools:context=".View.Report.Activity_Report_Show">
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             android:id="@+id/txtHeaderMonthYear"
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -55,7 +55,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -66,7 +66,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -79,7 +79,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -91,7 +91,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -103,7 +103,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -115,7 +115,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -127,7 +127,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -139,7 +139,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -151,7 +151,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -163,7 +163,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -175,7 +175,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -187,19 +187,19 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
-                            android:text="Society Work (hh:mm)"/>
+                            android:text="Society Work (hr:min)"/>
 
                     </LinearLayout>
 
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -211,7 +211,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -223,7 +223,7 @@
                     <LinearLayout
                         style="@style/LinearPortraitReportHeaderColor_green_hangout">
 
-                        <com.jolpai.doctorsdiary.CustomWidget.VerticalTextView
+                        <com.jolpai.doctorsdiary.View.helper.VerticalTextView
                             style="@style/TextViewPortraitReportHeader"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -484,11 +484,9 @@
 
                     </LinearLayout>
 
-
                 </LinearLayout>
 
             </LinearLayout>
-
 
         </LinearLayout>
 

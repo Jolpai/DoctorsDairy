@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="70dp"
+    android:padding="16dp"
+    android:background="@color/green_200"
+    android:id="@+id/relativeLayout">
+
+ <TextView
+     android:id="@+id/textPlanDate"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginEnd="8dp"
+     android:layout_marginStart="8dp"
+     android:text="20 January 2017"
+     android:textColor="@color/green_700"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"/>
+
+ <TextView
+     android:id="@+id/textName"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="8dp"
+     android:text="Name: "
+     android:textColor="@color/white"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/textPlanDate" />
+
+ <TextView
+     android:id="@+id/textType"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginEnd="8dp"
+     android:text="Type: "
+     android:textColor="@color/white"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/textPlanDate" />
+
+
+ <TextView
+     android:id="@+id/lblContactDate"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="8dp"
+     android:text="Contact Date:"
+     android:textColor="@color/white"
+     app:layout_constraintTop_toBottomOf="@+id/textName"
+     app:layout_constraintStart_toStartOf="parent" />
+
+ <TextView
+     android:id="@+id/textContactDate"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginEnd="8dp"
+     android:text="20 January 2017"
+     android:textColor="@color/white"
+     app:layout_constraintTop_toBottomOf="@+id/textType"
+     app:layout_constraintEnd_toEndOf="parent" />
+
+ <TextView
+     android:id="@+id/lblIntentDate"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="8dp"
+     android:text="Intent Date:"
+     android:textColor="@color/white"
+     app:layout_constraintTop_toBottomOf="@+id/lblContactDate"
+     app:layout_constraintStart_toStartOf="parent"/>
+
+ <TextView
+     android:id="@+id/textIntentDate"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginEnd="8dp"
+     android:text="20 January 2017"
+     android:textColor="@color/white"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/textContactDate"
+     app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

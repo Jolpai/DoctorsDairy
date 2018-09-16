@@ -189,7 +189,7 @@
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
 
-                       android:text="Society Work (hh:mm)"/>
+                       android:text="Society Work (hr:min)"/>
 
                </LinearLayout>
 
@@ -413,7 +413,7 @@
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
 
-                       android:hint="1.20 (hh.mm)"/>
+                       android:hint="1.20 (hr.min)"/>
 
                </LinearLayout>
 

@@ -20,7 +20,7 @@ public class Splash_P implements Splash_C.Presenter {
 
     @Override
     public void navigateToHomePage() {
-        view.navigateToHomePage(5000);
+        view.navigateToHomePage(200);
     }
 
     @Override

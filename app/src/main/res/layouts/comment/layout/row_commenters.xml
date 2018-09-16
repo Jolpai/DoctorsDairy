@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="70dp"
-    android:padding="10dp"
-    android:textColor="@color/white">
+    android:padding="16dp"
+    android:textColor="@color/green_200">
    <!-- <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -16,15 +16,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="20 January 2017"
-        android:textColor="@color/green_500"/>
+        android:textColor="@color/green_700"/>
 
     <TextView
         android:id="@+id/textComment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
         android:layout_below="@id/textCommentDate"
         android:text="Report looks great. need some improvement on bla bla bla.."
-        android:textColor="@color/black_500"/>
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/textCommentersName"
@@ -33,6 +34,6 @@
         android:layout_below="@id/textComment"
         android:layout_alignParentRight="false"
         android:text="Tanim Reja"
-        android:textColor="@color/white"/>
+        android:textColor="@color/green_hangout"/>
 
 </RelativeLayout>

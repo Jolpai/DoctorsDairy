@@ -9,7 +9,7 @@
 
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/blue_500"
@@ -18,6 +18,13 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
+        <Spinner
+            android:id="@+id/spnrYear"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"/>
+
     </android.support.v7.widget.Toolbar>
 
     <com.astuetz.PagerSlidingTabStrip
@@ -25,7 +32,7 @@
         android:layout_width="match_parent"
         android:background="@color/blue_500"
         android:layout_height="40dip"
-        android:layout_below="@+id/my_toolbar"
+        android:layout_below="@+id/toolbar"
         android:layout_alignParentLeft="true" />
 
     <android.support.v4.view.ViewPager
