@@ -32,8 +32,8 @@ public class MonthSelection_M implements MonthSelection_C.Model {
     public ArrayList<String> getListOfYear() {
         ArrayList<String> years = new ArrayList<String>();
         int thisYear = Calendar.getInstance().get(Calendar.YEAR);
-        int maxYearLimit = thisYear+5;
-        for (int i = 2015; i <= maxYearLimit; i++) {
+        int maxYearLimit = thisYear+1;
+        for (int i = 2017; i <= maxYearLimit; i++) {
             years.add(Integer.toString(i));
         }
         return years;

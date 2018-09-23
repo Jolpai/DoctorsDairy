@@ -2,9 +2,9 @@ package com.jolpai.doctorsdiary.View;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.jolpai.doctorsdiary.Contractor.SplashScreen.Splash_C;
 import com.jolpai.doctorsdiary.Presenter.SplashScreen.Splash_P;
@@ -14,6 +14,7 @@ public class Activity_Splash extends AppCompatActivity implements Splash_C.View{
 
     private Splash_C.Presenter presenter;
     private Context mContext;
+    //@Binds
 
 
     @Override

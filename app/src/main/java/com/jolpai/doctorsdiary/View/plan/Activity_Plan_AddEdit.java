@@ -91,8 +91,9 @@ public class Activity_Plan_AddEdit extends AppCompatActivity implements View.OnC
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(Activity_Plan_AddEdit.this, R.layout.x_row_span, items);
-        adapter.setDropDownViewResource(R.layout.x_row_spn_dropdown);
+        adapter.setDropDownViewResource(R.layout.row_spinner_plan_green);
         spinnerType.setAdapter(adapter);
+        spinnerType.setSelection(0,true);
 
         txtDateIntent.setOnClickListener(this);
 
@@ -133,17 +134,31 @@ public class Activity_Plan_AddEdit extends AppCompatActivity implements View.OnC
                     editTextPersonName.setText(planForMonth.getTargetName());
                     txtDateContact.setText(planForMonth.getContactDate());
                     txtDateIntent.setText(planForMonth.getIntentDate());
+                    String spinnerValue=planForMonth.getType().toString();
 
                     String s =spinnerType.getSelectedItem().toString();
-                    if(s.equalsIgnoreCase("Participant")){
-                        spinnerType.setSelection(0,false);
-                    }else if(s.equalsIgnoreCase("Volunteer")){
-                        spinnerType.post(new Runnable() {
-                            public void run() {
-                                spinnerType.setSelection(1);
-                            }
-                        });
-                    }else if(s.equalsIgnoreCase("Member")){
+                    if(spinnerValue.equalsIgnoreCase("Participant")){
+                        /*spinnerType.setAdapter(null);
+                        String[] items = {"Participant","Volunteer","Member"};
+                        ArrayAdapter<String> adapter = new ArrayAdapter<>(Activity_Plan_AddEdit.this, R.layout.x_row_span, items);
+                        adapter.setDropDownViewResource(R.layout.row_spinner_plan_green);
+                        spinnerType.setAdapter(adapter);*/
+                        spinnerType.setSelection(0,true);
+
+                    }else if(spinnerValue.equalsIgnoreCase("Volunteer")){
+                        /*spinnerType.setAdapter(null);
+                        String[] items = {"Participant","Volunteer","Member"};
+                        ArrayAdapter<String> adapter = new ArrayAdapter<>(Activity_Plan_AddEdit.this, R.layout.x_row_span, items);
+                        adapter.setDropDownViewResource(R.layout.row_spinner_plan_green);
+                        spinnerType.setAdapter(adapter);*/
+                        spinnerType.setSelection(1,true);
+
+                    }else if(spinnerValue.equalsIgnoreCase("Member")){
+                        /*spinnerType.setAdapter(null);
+                        String[] items = {"Participant","Volunteer","Member"};
+                        ArrayAdapter<String> adapter = new ArrayAdapter<>(Activity_Plan_AddEdit.this, R.layout.x_row_span, items);
+                        adapter.setDropDownViewResource(R.layout.row_spinner_plan_green);
+                        spinnerType.setAdapter(adapter);*/
                         spinnerType.setSelection(2,true);
                     }
 

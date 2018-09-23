@@ -97,10 +97,17 @@ public class Activity_MonthSelect extends AppCompatActivity
         });
     }
 
+   /* public void setColoredSpinner(){
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(Activity_MonthSelect.this,
+                R.layout.row_spinner_year_blue, yearsList);
+        spnrYear.setAdapter(adapter);
+        spnrYear.setSelection(positionOfCurrentYear);
+    }*/
+
     @Override
     public void setSpinner(ArrayList<String> yearsList, int positionOfCurrentYear) {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(Activity_MonthSelect.this,
-                android.R.layout.simple_spinner_item, yearsList);
+                R.layout.support_simple_spinner_dropdown_item, yearsList);
         spnrYear.setAdapter(adapter);
         spnrYear.setSelection(positionOfCurrentYear);
     }
